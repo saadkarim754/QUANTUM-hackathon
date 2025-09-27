@@ -1,0 +1,196 @@
+// Hackathon Information and Constants
+export const HACKATHON_INFO = {
+  title: "First Quantum Computing Hackathon in Pakistan",
+  subtitle: "Solving Real-World Challenges with Quantum Technologies",
+  dates: "February 6-8, 2026",
+  location: "National Center for Physics (NCP), Islamabad, Pakistan",
+  registrationDeadline: "January 15, 2026",
+  
+  description: `Pakistan's first dedicated quantum problem-solving competition, directly connecting innovation to the UN Sustainable Development Goals (SDGs) while building national capacity in quantum computing, communication, and security.`,
+  
+  stats: {
+    applicants: 70,
+    finalParticipants: 49,
+    teams: 7,
+    teamSize: 7,
+    durationDays: 3
+  }
+};
+
+export const TIMELINE = [
+  {
+    phase: "Registration & Screening",
+    description: "Students and young researchers apply online. 70 applicants will be shortlisted based on background, motivation, and competency.",
+    deadline: "January 15, 2026",
+    status: "upcoming"
+  },
+  {
+    phase: "Preparatory Coursework", 
+    description: "Shortlisted candidates attend OQI-led online training in quantum principles and programming with assignments.",
+    deadline: "January 30, 2026",
+    status: "upcoming"
+  },
+  {
+    phase: "Final Selection & Teams",
+    description: "49 participants chosen based on coursework performance and grouped into 7 diverse teams of 7 members each.",
+    deadline: "February 1, 2026", 
+    status: "upcoming"
+  },
+  {
+    phase: "Hackathon Event",
+    description: "3-day intensive hackathon at NCP with mentorship, development, and presentations.",
+    deadline: "February 6-8, 2026",
+    status: "upcoming"
+  }
+];
+
+export const PRIZES = [
+  {
+    position: "1st Place",
+    prize: "Cash Prize + Gold Medal",
+    icon: "🏆",
+    color: "gold"
+  },
+  {
+    position: "2nd Place", 
+    prize: "Cash Prize + Silver Medal",
+    icon: "🥈",
+    color: "silver"
+  },
+  {
+    position: "3rd Place",
+    prize: "Cash Prize + Bronze Medal", 
+    icon: "🥉",
+    color: "bronze"
+  }
+];
+
+export const ADDITIONAL_BENEFITS = [
+  "Long-term mentoring opportunities",
+  "Participation in national and international summer colleges",
+  "Invitations to present at International Natural Sciences Conference (INSC)",
+  "Presentation opportunities at International Nathiagalli Summer College",
+  "Recognition at national and international conferences"
+];
+
+export const SDG_THEMES = [
+  {
+    title: "Health & Well-Being",
+    description: "Affordable diagnostics & rural healthcare solutions",
+    icon: "🏥",
+    color: "bg-red-500"
+  },
+  {
+    title: "Quality Education", 
+    description: "Inclusive EdTech in local languages",
+    icon: "📚",
+    color: "bg-blue-500"
+  },
+  {
+    title: "Gender Equality",
+    description: "Reducing gender gaps in STEM & workplaces", 
+    icon: "⚖️",
+    color: "bg-purple-500"
+  },
+  {
+    title: "Clean Water & Sanitation",
+    description: "Low-tech purification & monitoring systems",
+    icon: "💧",
+    color: "bg-cyan-500"
+  },
+  {
+    title: "Clean Energy",
+    description: "Rural solar microgrids & storage solutions",
+    icon: "⚡",
+    color: "bg-yellow-500"
+  },
+  {
+    title: "Economic Growth",
+    description: "Digital freelancing & micro-enterprise tools",
+    icon: "💼",
+    color: "bg-green-500"
+  },
+  {
+    title: "Climate Action",
+    description: "Early warning systems & AI-based risk maps",
+    icon: "🌍",
+    color: "bg-emerald-500"
+  },
+  {
+    title: "Life on Land",
+    description: "Reforestation & biodiversity monitoring",
+    icon: "🌳",
+    color: "bg-lime-500"
+  }
+];
+
+export const EVALUATION_CRITERIA = [
+  {
+    title: "Innovation & Creativity",
+    description: "Novelty of the idea and originality of the approach",
+    weight: "25%"
+  },
+  {
+    title: "Quantum Depth",
+    description: "Effective and meaningful use of quantum principles and programming", 
+    weight: "25%"
+  },
+  {
+    title: "Relevance to SDGs",
+    description: "Alignment with local challenges and global goals",
+    weight: "20%"
+  },
+  {
+    title: "Feasibility & Impact", 
+    description: "Practicality, scalability, and potential real-world benefits",
+    weight: "20%"
+  },
+  {
+    title: "Teamwork & Presentation",
+    description: "Collaboration, clarity, and quality of final pitch",
+    weight: "10%"
+  }
+];
+
+export const ORGANIZERS = [
+  {
+    name: "Pakistan Institute of Engineering & Applied Sciences (PIEAS)",
+    role: "Lead Host",
+    logo: "/images/sponsors/pieas.png",
+    description: "Leading engineering and applied sciences institute"
+  },
+  {
+    name: "National Center for Physics (NCP)",
+    role: "Venue Host", 
+    logo: "/images/sponsors/ncp.png",
+    description: "Premier physics research center hosting the event"
+  },
+  {
+    name: "National Institute of Lasers and Optronics (NILOP)",
+    role: "Co-Host",
+    logo: "/images/sponsors/nilop.png", 
+    description: "Advanced laser and optronics research institute"
+  },
+  {
+    name: "Open Quantum Institute (OQI)",
+    role: "Training Partner",
+    logo: "/images/sponsors/oqi.png",
+    description: "Providing quantum education and training support"
+  }
+];
+
+export const CONTACT_INFO = {
+  projectManager: {
+    name: "Dr. Manzoor Ikram",
+    title: "Director General, NILOP",
+    email: "director@nilop.org.pk" // placeholder email
+  }
+};
+
+export const ELIGIBILITY = [
+  "Open to students and young researchers from universities across Pakistan",
+  "Diverse disciplines: Physics, Computer Science, Engineering, Mathematics, AI and Machine Learning",
+  "Strong motivation and background in STEM fields",
+  "Commitment to complete preparatory coursework",
+  "Ability to work collaboratively in diverse teams"
+];
