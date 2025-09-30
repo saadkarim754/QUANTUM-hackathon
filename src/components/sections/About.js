@@ -5,14 +5,14 @@ const About = () => {
   const methodology = [
     {
       step: 1,
-      title: "Registration & Screening",
-      description: "Students and young researchers will apply online. Based on background, motivation, competency and more, 70 applicants will be shortlisted.",
-      icon: "📝"
+      title: "Apply Now - Registration Open!",
+      description: "Applications are now open! Submit your application by October 31st. We're looking for motivated students and young researchers passionate about quantum computing.",
+      icon: "�"
     },
     {
       step: 2,
-      title: "Preparatory Coursework", 
-      description: "Shortlisted candidates will attend OQI-led online training in quantum principles and programming. They will complete assignments to demonstrate performance.",
+      title: "November Coursework", 
+      description: "Selected applicants will complete OQI-led online quantum computing training throughout November. This intensive preparation covers quantum principles, programming, and practical applications.",
       icon: "📚"
     },
     {
@@ -51,7 +51,74 @@ const About = () => {
 
   return (
     <section id="about" className="py-16 sm:py-20 bg-white relative overflow-hidden">
-      {/* Background decorative elements */}
+      {/* Enhanced Quantum Background decorative elements */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        {/* Large Quantum Atoms */}
+        <div className="absolute top-1/6 left-1/8 w-16 h-16 animate-pulse">
+          <div className="relative w-full h-full">
+            {/* Nucleus */}
+            <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-purple-500 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+            {/* Electron Orbits */}
+            <div className="absolute inset-0 border-2 border-purple-400 rounded-full animate-spin" style={{animationDuration: '8s'}}></div>
+            <div className="absolute inset-2 border border-indigo-400 rounded-full animate-spin" style={{animationDuration: '6s', animationDirection: 'reverse'}}></div>
+            <div className="absolute inset-4 border border-purple-300 rounded-full animate-spin" style={{animationDuration: '4s'}}></div>
+            {/* Electrons */}
+            <div className="absolute top-0 left-1/2 w-2 h-2 bg-purple-500 rounded-full transform -translate-x-1/2 animate-bounce"></div>
+            <div className="absolute bottom-2 right-2 w-1 h-1 bg-indigo-500 rounded-full animate-ping"></div>
+          </div>
+        </div>
+        
+        <div className="absolute top-2/3 right-1/6 w-14 h-14 animate-pulse" style={{animationDelay: '1s'}}>
+          <div className="relative w-full h-full">
+            <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-indigo-500 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute inset-0 border-2 border-indigo-400 rounded-full animate-spin" style={{animationDuration: '10s'}}></div>
+            <div className="absolute inset-3 border border-purple-400 rounded-full animate-spin" style={{animationDuration: '7s', animationDirection: 'reverse'}}></div>
+            <div className="absolute top-1 left-1/2 w-1 h-1 bg-indigo-400 rounded-full transform -translate-x-1/2 animate-bounce"></div>
+          </div>
+        </div>
+        
+        <div className="absolute bottom-1/4 left-1/3 w-12 h-12 animate-pulse" style={{animationDelay: '2s'}}>
+          <div className="relative w-full h-full">
+            <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-purple-400 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute inset-0 border border-purple-300 rounded-full animate-spin" style={{animationDuration: '12s'}}></div>
+            <div className="absolute right-0 top-1/2 w-1 h-1 bg-purple-300 rounded-full transform -translate-y-1/2 animate-ping"></div>
+          </div>
+        </div>
+        
+        {/* Quantum Field Lines */}
+        <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" fill="none">
+          <path d="M0,100 Q300,50 600,100 T1200,100" stroke="#a855f7" strokeWidth="1" opacity="0.3" className="animate-pulse"/>
+          <path d="M0,300 Q400,250 800,300 T1600,300" stroke="#6366f1" strokeWidth="1" opacity="0.2" className="animate-pulse" style={{animationDelay: '1s'}}/>
+          <path d="M0,500 Q200,450 400,500 T800,500" stroke="#8b5cf6" strokeWidth="1" opacity="0.2" className="animate-pulse" style={{animationDelay: '2s'}}/>
+          <path d="M0,700 Q350,650 700,700 T1400,700" stroke="#a855f7" strokeWidth="1" opacity="0.1" className="animate-pulse" style={{animationDelay: '3s'}}/>
+          
+          {/* Interconnecting Field Lines */}
+          <line x1="100" y1="150" x2="300" y2="350" stroke="#8b5cf6" strokeWidth="0.5" opacity="0.2" className="animate-pulse"/>
+          <line x1="500" y1="120" x2="700" y2="320" stroke="#6366f1" strokeWidth="0.5" opacity="0.2" className="animate-pulse" style={{animationDelay: '1.5s'}}/>
+          <line x1="200" y1="550" x2="600" y2="350" stroke="#a855f7" strokeWidth="0.5" opacity="0.1" className="animate-pulse" style={{animationDelay: '2.5s'}}/>
+        </svg>
+        
+        {/* Quantum Particles */}
+        <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping"></div>
+        <div className="absolute top-1/2 left-1/6 w-1 h-1 bg-indigo-400 rounded-full animate-ping" style={{animationDelay: '0.7s'}}></div>
+        <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-purple-300 rounded-full animate-ping" style={{animationDelay: '1.3s'}}></div>
+        <div className="absolute bottom-1/3 left-1/2 w-1 h-1 bg-indigo-300 rounded-full animate-ping" style={{animationDelay: '1.9s'}}></div>
+        <div className="absolute top-1/5 left-2/3 w-1 h-1 bg-purple-400 rounded-full animate-ping" style={{animationDelay: '2.7s'}}></div>
+        
+        {/* Molecular Structures */}
+        <div className="absolute top-1/3 left-1/4 opacity-30">
+          <div className="relative w-8 h-8">
+            <div className="absolute top-0 left-0 w-2 h-2 bg-purple-400 rounded-full"></div>
+            <div className="absolute top-0 right-0 w-2 h-2 bg-indigo-400 rounded-full"></div>
+            <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-purple-300 rounded-full transform -translate-x-1/2"></div>
+            <line x1="4" y1="4" x2="20" y2="4" stroke="#8b5cf6" strokeWidth="1"/>
+            <line x1="4" y1="4" x2="12" y2="24" stroke="#8b5cf6" strokeWidth="1"/>
+            <line x1="20" y1="4" x2="12" y2="24" stroke="#8b5cf6" strokeWidth="1"/>
+          </div>
+        </div>
+      </div>
+      
+      {/* Existing background elements - keeping the original subtle decorations */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-purple-400 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/3 w-40 h-40 bg-purple-300 rounded-full blur-3xl"></div>

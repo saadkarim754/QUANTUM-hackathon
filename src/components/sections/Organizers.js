@@ -61,17 +61,33 @@ const Organizers = () => {
             >
               <div className="flex flex-col items-center text-center">
                 {/* Organization Logo */}
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full flex items-center justify-center mb-4 sm:mb-6 shadow-lg">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 mb-4 sm:mb-6 flex items-center justify-center bg-white rounded-xl shadow-lg border border-gray-200 p-2">
                   {org.name.includes('CERN') || org.name.includes('OQI') ? (
-                    <span className="text-white font-bold text-lg sm:text-xl">🌍</span>
+                    <img 
+                      src="/images/sponsors/oqi-logo-scaled.webp" 
+                      alt="Open Quantum Institute (OQI) at CERN" 
+                      className="w-full h-full object-contain"
+                    />
                   ) : org.name.includes('PIEAS') ? (
-                    <span className="text-white font-bold text-lg sm:text-xl">🎓</span>
+                    <img 
+                      src="/images/sponsors/pieas.png" 
+                      alt="Pakistan Institute of Engineering and Applied Sciences" 
+                      className="w-full h-full object-contain"
+                    />
                   ) : org.name.includes('NCP') ? (
-                    <span className="text-white font-bold text-lg sm:text-xl">🔬</span>
+                    <img 
+                      src="/images/sponsors/ncp.png" 
+                      alt="National Center for Physics" 
+                      className="w-full h-full object-contain"
+                    />
                   ) : org.name.includes('NILOP') ? (
-                    <span className="text-white font-bold text-lg sm:text-xl">💡</span>
+                    <img 
+                      src="/images/sponsors/Nilop.jpg" 
+                      alt="National Institute of Lasers and Optronics" 
+                      className="w-full h-full object-contain"
+                    />
                   ) : (
-                    <span className="text-white font-bold text-sm sm:text-base">
+                    <span className="text-purple-600 font-bold text-sm sm:text-base">
                       {org.name.split(' ').map(word => word[0]).slice(0, 3).join('')}
                     </span>
                   )}
@@ -153,9 +169,13 @@ const Organizers = () => {
             </h3>
             
             <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6">
-              {/* Leader Photo Placeholder */}
-              <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                <span className="text-white font-bold text-xl sm:text-2xl xl:text-3xl">👨‍🔬</span>
+              {/* Leader Photo */}
+              <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden flex-shrink-0 shadow-lg border-4 border-indigo-200">
+                <img 
+                  src="/images/team/manzoor-ikram.png" 
+                  alt="Dr. Manzoor Ikram - Project Manager" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               <div className="flex-1 text-center md:text-left">
