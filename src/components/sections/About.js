@@ -50,21 +50,14 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 sm:py-20 bg-white relative overflow-hidden">
+    <section id="about" className="py-8 sm:py-20 bg-white relative overflow-hidden">
       {/* Enhanced Quantum Background decorative elements */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
-        {/* Large Quantum Atoms */}
-        <div className="absolute top-1/6 left-1/8 w-16 h-16 animate-pulse">
+        {/* Simplified mobile atoms */}
+        <div className="absolute top-1/6 left-1/8 w-8 sm:w-16 h-8 sm:h-16 animate-pulse">
           <div className="relative w-full h-full">
-            {/* Nucleus */}
-            <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-purple-500 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
-            {/* Electron Orbits */}
-            <div className="absolute inset-0 border-2 border-purple-400 rounded-full animate-spin" style={{animationDuration: '8s'}}></div>
-            <div className="absolute inset-2 border border-indigo-400 rounded-full animate-spin" style={{animationDuration: '6s', animationDirection: 'reverse'}}></div>
-            <div className="absolute inset-4 border border-purple-300 rounded-full animate-spin" style={{animationDuration: '4s'}}></div>
-            {/* Electrons */}
-            <div className="absolute top-0 left-1/2 w-2 h-2 bg-purple-500 rounded-full transform -translate-x-1/2 animate-bounce"></div>
-            <div className="absolute bottom-2 right-2 w-1 h-1 bg-indigo-500 rounded-full animate-ping"></div>
+            <div className="absolute top-1/2 left-1/2 w-2 sm:w-3 h-2 sm:h-3 bg-purple-500 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute inset-0 border border-purple-400 sm:border-2 rounded-full animate-spin" style={{animationDuration: '8s'}}></div>
           </div>
         </div>
         
@@ -127,11 +120,11 @@ const About = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* About Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-purple-900 mb-4 sm:mb-6">
+        <div className="text-center mb-6 sm:mb-16">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-purple-900 mb-2 sm:mb-6">
             About the Hackathon
           </h2>
-          <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
+          <p className="text-sm sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
             Pakistan's first-ever quantum computing hackathon, bringing together the brightest minds 
             to tackle real-world challenges using quantum technologies and contribute to achieving 
             the Sustainable Development Goals.

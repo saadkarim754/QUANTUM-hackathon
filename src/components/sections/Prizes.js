@@ -3,7 +3,7 @@ import { PRIZES, ADDITIONAL_BENEFITS } from '@/lib/constants';
 
 const Prizes = () => {
   return (
-    <section id="prizes" className="py-16 sm:py-20 bg-gradient-to-r from-pink-900 via-purple-900 to-blue-900 relative overflow-hidden">
+    <section id="prizes" className="py-8 sm:py-20 bg-gradient-to-r from-pink-900 via-purple-900 to-blue-900 relative overflow-hidden">
       {/* Quantum wave background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

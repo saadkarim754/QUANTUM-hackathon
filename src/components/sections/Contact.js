@@ -4,7 +4,7 @@ import { CONTACT_INFO } from '@/lib/constants';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-16 sm:py-20 bg-gradient-to-r from-indigo-900 via-purple-900 to-purple-800 relative overflow-hidden">
+    <section id="contact" className="py-8 sm:py-20 bg-gradient-to-r from-indigo-900 via-purple-900 to-purple-800 relative overflow-hidden">
       {/* Quantum circuit background */}
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -3,7 +3,7 @@ import { TIMELINE, EVALUATION_CRITERIA } from '@/lib/constants';
 
 const Timeline = () => {
   return (
-    <section id="timeline" className="py-16 sm:py-20 bg-gradient-to-r from-purple-800 via-purple-900 to-indigo-900 relative overflow-hidden">
+    <section id="timeline" className="py-8 sm:py-20 bg-gradient-to-r from-purple-800 via-purple-900 to-indigo-900 relative overflow-hidden">
       {/* Quantum particles background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-purple-300 rounded-full animate-pulse"></div>

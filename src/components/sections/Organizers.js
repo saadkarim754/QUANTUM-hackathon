@@ -3,7 +3,7 @@ import { ORGANIZERS, CONTACT_INFO } from '@/lib/constants';
 
 const Organizers = () => {
   return (
-        <section id="organizers" className="py-16 sm:py-20 bg-white relative overflow-hidden">
+        <section id="organizers" className="py-8 sm:py-20 bg-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -3,7 +3,7 @@ import { SDG_THEMES } from '@/lib/constants';
 
 const Themes = () => {
   return (
-        <section id="themes" className="py-16 sm:py-20 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
+        <section id="themes" className="py-8 sm:py-20 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
       {/* SDG background pattern */}
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
