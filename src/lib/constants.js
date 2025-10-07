@@ -65,13 +65,10 @@ export const PRIZES = [
   }
 ];
 
-export const ADDITIONAL_BENEFITS = [
-  "Long-term mentoring opportunities",
-  "Participation in national and international summer colleges",
-  "Invitations to present at International Natural Sciences Conference (INSC)",
-  "Presentation opportunities at International Nathiagalli Summer College",
-  "Recognition at national and international conferences"
-];
+export const CAREER_INCENTIVES = {
+  title: "Career Incentives",
+  description: "Beyond the monetary rewards, participants gain access to invaluable career development opportunities. Winners receive long-term mentoring from leading quantum researchers, participation in prestigious national and international summer colleges, and invitations to present their work at the International Natural Sciences Conference (INSC) and International Nathiagalli Summer College. These experiences provide direct pathways to advanced research opportunities, international collaboration networks, and recognition within Pakistan's growing quantum research community. The hackathon serves as a launching pad for participants to establish themselves as pioneers in the country's quantum technology landscape."
+};
 
 export const SDG_THEMES = [
   {

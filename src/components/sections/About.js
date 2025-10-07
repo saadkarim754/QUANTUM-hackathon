@@ -166,48 +166,26 @@ const About = () => {
           </div>
         </div>
 
-        {/* Who Can Apply - Updated with Eligibility and Evaluation Criteria */}
+        {/* Who Can Apply - Eligibility Criteria Only */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-purple-900 text-center mb-8">
-            Eligibility & Evaluation
+            Eligibility Criteria
           </h3>
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Eligibility Criteria */}
-              <Card variant="glass" className="p-8">
-                <h4 className="text-xl font-bold text-purple-900 mb-4 flex items-center gap-2">
-                  <span className="text-2xl">🎓</span>
-                  Eligibility Criteria
-                </h4>
-                <ul className="space-y-3">
-                  {eligibility.map((criteria, index) => (
-                    <li key={index} className="flex items-start gap-2 text-purple-700">
-                      <span className="text-purple-500 mt-1">•</span>
-                      <span className="text-sm leading-relaxed">{criteria}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-
-              {/* Evaluation Criteria */}
-              <Card variant="glass" className="p-8">
-                <h4 className="text-xl font-bold text-purple-900 mb-4 flex items-center gap-2">
-                  <span className="text-2xl">📊</span>
-                  Evaluation Criteria
-                </h4>
-                <div className="space-y-4">
-                  {EVALUATION_CRITERIA.map((criteria, index) => (
-                    <div key={index} className="border-b border-purple-200 pb-3 last:border-b-0">
-                      <div className="flex justify-between items-start mb-1">
-                        <span className="font-semibold text-purple-900 text-sm">{criteria.title}</span>
-                        <span className="text-purple-600 text-xs font-bold">{criteria.weight}</span>
-                      </div>
-                      <p className="text-purple-700 text-xs leading-relaxed">{criteria.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <Card variant="glass" className="p-8">
+              <h4 className="text-xl font-bold text-purple-900 mb-4 flex items-center gap-2">
+                <span className="text-2xl">🎓</span>
+                Eligibility Criteria
+              </h4>
+              <ul className="space-y-3">
+                {eligibility.map((criteria, index) => (
+                  <li key={index} className="flex items-start gap-2 text-purple-700">
+                    <span className="text-purple-500 mt-1">•</span>
+                    <span className="text-sm leading-relaxed">{criteria}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
           </div>
         </div>
 

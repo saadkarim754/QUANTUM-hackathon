@@ -14,14 +14,15 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-[85vh] sm:min-h-screen flex flex-col justify-center bg-white pt-16 sm:pt-24 overflow-hidden">
-      {/* Quantum Decorative Elements for White Background */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        {/* Floating Atoms */}
+      {/* Enhanced Quantum Decorative Elements */}
+      <div className="absolute inset-0 opacity-8 pointer-events-none">
+        {/* Floating Atoms with connecting lines */}
         <div className="absolute top-1/4 left-1/6 w-8 sm:w-12 h-8 sm:h-12 animate-pulse">
           <div className="relative w-full h-full">
             <div className="absolute inset-0 border-2 border-purple-400 rounded-full"></div>
             <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-purple-500 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute top-0 left-1/2 w-1 h-1 bg-purple-400 rounded-full transform -translate-x-1/2 animate-bounce"></div>
+            <div className="absolute -bottom-2 -right-1 w-1 h-1 bg-purple-300 rounded-full animate-ping"></div>
           </div>
         </div>
         
@@ -30,6 +31,7 @@ const Hero = () => {
             <div className="absolute inset-0 border-2 border-indigo-400 rounded-full"></div>
             <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-indigo-500 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 right-0 w-1 h-1 bg-indigo-400 rounded-full animate-ping"></div>
+            <div className="absolute -top-1 -left-2 w-1 h-1 bg-indigo-300 rounded-full animate-bounce"></div>
           </div>
         </div>
         
@@ -37,21 +39,51 @@ const Hero = () => {
           <div className="relative w-full h-full">
             <div className="absolute inset-0 border border-purple-300 rounded-full"></div>
             <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-purple-400 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute -bottom-1 left-0 w-1 h-1 bg-purple-200 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+
+        {/* Additional atoms for network effect */}
+        <div className="absolute top-1/3 left-1/2 w-6 h-6 animate-pulse" style={{animationDelay: '3s'}}>
+          <div className="relative w-full h-full">
+            <div className="absolute inset-0 border border-blue-400 rounded-full"></div>
+            <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-blue-500 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-1/3 left-1/4 w-7 h-7 animate-pulse" style={{animationDelay: '1.5s'}}>
+          <div className="relative w-full h-full">
+            <div className="absolute inset-0 border border-cyan-400 rounded-full"></div>
+            <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-cyan-500 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
           </div>
         </div>
         
-        {/* Quantum Wave Patterns */}
+        {/* Quantum Connection Lines */}
         <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1000 800" fill="none">
-          <path d="M0,400 Q250,350 500,400 T1000,400" stroke="#a855f7" strokeWidth="1" opacity="0.3" className="animate-pulse"/>
-          <path d="M0,200 Q300,150 600,200 T1200,200" stroke="#6366f1" strokeWidth="1" opacity="0.2" className="animate-pulse" style={{animationDelay: '1s'}}/>
-          <path d="M0,600 Q200,550 400,600 T800,600" stroke="#8b5cf6" strokeWidth="1" opacity="0.2" className="animate-pulse" style={{animationDelay: '2s'}}/>
+          {/* Connecting lines between atoms */}
+          <line x1="167" y1="200" x2="500" y2="400" stroke="#a855f7" strokeWidth="1" opacity="0.3" className="animate-pulse" strokeDasharray="5,5"/>
+          <line x1="800" y1="600" x2="667" y2="400" stroke="#6366f1" strokeWidth="1" opacity="0.2" className="animate-pulse" style={{animationDelay: '1s'}} strokeDasharray="3,3"/>
+          <line x1="250" y1="533" x2="500" y2="400" stroke="#8b5cf6" strokeWidth="1" opacity="0.25" className="animate-pulse" style={{animationDelay: '2s'}} strokeDasharray="4,4"/>
+          <line x1="167" y1="200" x2="250" y2="533" stroke="#c084fc" strokeWidth="1" opacity="0.2" className="animate-pulse" style={{animationDelay: '3s'}} strokeDasharray="2,2"/>
+          
+          {/* Quantum Wave Patterns */}
+          <path d="M0,400 Q250,350 500,400 T1000,400" stroke="#a855f7" strokeWidth="1" opacity="0.15" className="animate-pulse"/>
+          <path d="M0,200 Q300,150 600,200 T1200,200" stroke="#6366f1" strokeWidth="1" opacity="0.12" className="animate-pulse" style={{animationDelay: '1s'}}/>
+          <path d="M0,600 Q200,550 400,600 T800,600" stroke="#8b5cf6" strokeWidth="1" opacity="0.12" className="animate-pulse" style={{animationDelay: '2s'}}/>
+          
+          {/* Additional quantum field lines */}
+          <circle cx="167" cy="200" r="50" stroke="#a855f7" strokeWidth="1" opacity="0.1" fill="none" className="animate-pulse"/>
+          <circle cx="800" cy="600" r="60" stroke="#6366f1" strokeWidth="1" opacity="0.08" fill="none" className="animate-pulse" style={{animationDelay: '1s'}}/>
+          <circle cx="500" cy="400" r="40" stroke="#8b5cf6" strokeWidth="1" opacity="0.1" fill="none" className="animate-pulse" style={{animationDelay: '2s'}}/>
         </svg>
         
-        {/* Scattered Quantum Particles */}
+        {/* Enhanced Quantum Particles */}
         <div className="absolute top-1/5 left-1/3 w-1 h-1 bg-purple-400 rounded-full animate-ping"></div>
         <div className="absolute top-2/3 left-1/5 w-1 h-1 bg-indigo-400 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
         <div className="absolute top-1/3 right-1/6 w-1 h-1 bg-purple-300 rounded-full animate-ping" style={{animationDelay: '1.5s'}}></div>
         <div className="absolute bottom-1/4 left-2/3 w-1 h-1 bg-indigo-300 rounded-full animate-ping" style={{animationDelay: '2.5s'}}></div>
+        <div className="absolute top-1/6 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-ping" style={{animationDelay: '3.5s'}}></div>
+        <div className="absolute bottom-1/5 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping" style={{animationDelay: '4s'}}></div>
       </div>
       {/* Canvas-style Title Section with Team Image Background */}
       <div className="relative w-full max-w-6xl mx-auto h-48 sm:h-80 lg:h-96 mb-4 sm:mb-12 overflow-hidden rounded-lg shadow-xl px-4 sm:px-8">

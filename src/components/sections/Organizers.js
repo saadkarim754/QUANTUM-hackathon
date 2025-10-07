@@ -200,7 +200,7 @@ const Organizers = () => {
             
             <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6">
               {/* Leader Photo */}
-              <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden flex-shrink-0 shadow-lg border-4 border-indigo-200">
+              <div className="w-32 h-50 sm:w-36 sm:h-40 rounded-lg overflow-hidden flex-shrink-0 shadow-lg border-4 border-indigo-200 bg-blue-100">
                 <img 
                   src="/images/team/manzoor-ikram.png" 
                   alt="Dr. Manzoor Ikram - Project Manager" 
