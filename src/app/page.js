@@ -1,4 +1,5 @@
 import Navigation from '@/components/layout/Navigation';
+import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Timeline from '@/components/sections/Timeline';
@@ -13,11 +14,11 @@ export default function Home() {
       <Navigation />
       <Hero />
       <About />
-      <Timeline />
       <Themes />
       <Prizes />
       <Organizers />
       <Contact />
+      <Footer />
     </div>
   )
 }

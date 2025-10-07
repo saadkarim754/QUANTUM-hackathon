@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import { HACKATHON_INFO } from '@/lib/constants';
-import { calculateDaysUntil } from '@/lib/utils';
+import { calculateDaysUntil, scrollToSection } from '@/lib/utils';
 
 const Hero = () => {
   const [daysUntil, setDaysUntil] = useState(null);
@@ -77,83 +77,57 @@ const Hero = () => {
               <h1 className="text-lg sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1 sm:mb-4 text-white leading-tight drop-shadow-2xl">
                 {HACKATHON_INFO.title}
               </h1>
-              <p className="text-xs sm:text-base lg:text-lg text-white/90 leading-relaxed drop-shadow-lg">
+              <p className="text-xs sm:text-base lg:text-lg text-white/90 leading-relaxed drop-shadow-lg mb-4 sm:mb-6">
                 {HACKATHON_INFO.subtitle}
               </p>
+              
+              {/* Event Details inside card */}
+              <div className="space-y-2 sm:space-y-3">
+                <p className="text-xs sm:text-base text-white/95 flex items-center justify-center gap-2 font-semibold">
+                  <span className="text-sm sm:text-xl">📅</span>
+                  <span className="leading-relaxed">{HACKATHON_INFO.dates}</span>
+                </p>
+                <p className="text-xs sm:text-base text-white/95 flex items-center justify-center gap-2">
+                  <span className="text-sm sm:text-xl">📍</span>
+                  <span className="leading-relaxed text-center">NCP, Islamabad</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* White Background Content Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Event Details */}
-        <div className="mb-3 sm:mb-8 space-y-1 sm:space-y-2">
-          <p className="text-xs sm:text-base text-purple-700 flex items-center justify-center gap-2 font-semibold">
-            <span className="text-sm sm:text-xl">📅</span>
-            <span className="leading-relaxed">{HACKATHON_INFO.dates}</span>
-          </p>
-          <p className="text-xs sm:text-base text-purple-600 flex items-center justify-center gap-2">
-            <span className="text-sm sm:text-xl">📍</span>
-            <span className="leading-relaxed text-center">NCP, Islamabad</span>
-          </p>
+      {/* Apply Now Button and Days Counter - Outside the title card */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -mt-2 sm:-mt-1">
+        {/* Apply Now Button */}
+        <div className="mb-1 sm:mb-2">
+          <button className="bg-gradient-to-r from-orange-500 via-purple-600 to-orange-500 bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700 text-white font-bold px-8 sm:px-12 py-4 sm:py-5 rounded-full text-base sm:text-lg shadow-lg transform hover:scale-105 animate-pulse">
+            🚀 Apply Now
+          </button>
         </div>
-
-        {/* Registration Countdown */}
+        
+        {/* Days Left Counter */}
         {daysUntil && daysUntil > 0 && (
-          <div className="mb-4 sm:mb-10">
-            <div className="inline-block bg-gradient-to-r from-red-100 to-orange-100 border-2 border-red-200 rounded-xl p-3 sm:p-6">
-              <p className="text-red-700 mb-1 sm:mb-2 font-medium text-xs leading-relaxed">Registration closes in</p>
-              <p className="text-xl sm:text-3xl lg:text-4xl font-bold text-red-900 leading-tight mb-1">
-                {daysUntil} days
-              </p>
-              <p className="text-orange-700 text-xs font-medium">Apply by Oct 31 • Course Nov</p>
-            </div>
+          <div className="inline-block bg-gradient-to-r from-red-100 to-orange-100 border-2 border-red-200 rounded-xl p-3 sm:p-6 mb-1 sm:mb-2">
+            <p className="text-red-700 mb-1 sm:mb-2 font-medium text-xs leading-relaxed">Registration closes in</p>
+            <p className="text-xl sm:text-3xl lg:text-4xl font-bold text-red-900 leading-tight mb-1">
+              {daysUntil} days
+            </p>
+            <p className="text-orange-700 text-xs font-medium">Apply by Oct 31</p>
           </div>
         )}
-
-        {/* Key Stats */}
-        <div className="grid grid-cols-4 gap-1 sm:gap-3 mb-4 sm:mb-10 max-w-xs sm:max-w-3xl mx-auto">
-          <div className="bg-gradient-to-br from-purple-500 to-indigo-600 text-white rounded-lg p-1 sm:p-3 text-center shadow-lg">
-            <div className="text-sm sm:text-lg lg:text-xl font-bold mb-0 sm:mb-1">📧</div>
-            <div className="text-xs font-medium">Apply</div>
-          </div>
-          <div className="bg-purple-50 border border-purple-200 rounded-lg p-1 sm:p-3 text-center">
-            <div className="text-sm sm:text-lg lg:text-xl font-bold text-purple-900 mb-0 sm:mb-1">{HACKATHON_INFO.stats.finalParticipants}</div>
-            <div className="text-xs text-purple-700">Spots</div>
-          </div>
-          <div className="bg-purple-50 border border-purple-200 rounded-lg p-1 sm:p-3 text-center">
-            <div className="text-sm sm:text-lg lg:text-xl font-bold text-purple-900 mb-0 sm:mb-1">{HACKATHON_INFO.stats.teams}</div>
-            <div className="text-xs text-purple-700">Teams</div>
-          </div>
-          <div className="bg-purple-50 border border-purple-200 rounded-lg p-1 sm:p-3 text-center">
-            <div className="text-sm sm:text-lg lg:text-xl font-bold text-purple-900 mb-0 sm:mb-1">{HACKATHON_INFO.stats.durationDays}</div>
-            <div className="text-xs text-purple-700">Days</div>
-          </div>
-        </div>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center items-center mb-4 sm:mb-8">
-          <Button size="sm" variant="primary" className="text-sm px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 w-full sm:w-auto min-w-[160px] sm:min-w-0 shadow-lg">
-            🚀 Apply Now
-          </Button>
-          <Button size="sm" variant="outline" className="text-sm px-4 py-2 sm:px-6 sm:py-3 text-purple-700 border-purple-300 hover:bg-purple-50 w-full sm:w-auto min-w-[160px] sm:min-w-0">
+        
+        {/* Learn More Button */}
+        <div>
+          <button 
+            onClick={() => scrollToSection('about')}
+            className="bg-purple-100 hover:bg-purple-200 text-purple-700 hover:text-purple-800 font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base border border-purple-200 hover:border-purple-300 transition-all duration-200 transform hover:scale-105"
+          >
             📋 Learn More
-          </Button>
-        </div>
-
-        {/* Quantum Logo/Symbol */}
-        <div className="mt-2 sm:mt-6 opacity-60">
-          <div className="w-12 h-12 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mx-auto relative">
-            <div className="absolute inset-0 border-2 border-purple-400 rounded-full animate-spin"></div>
-            <div className="absolute inset-2 border-2 border-purple-500 rounded-full animate-spin" style={{animationDirection: 'reverse'}}></div>
-            <div className="absolute inset-4 border-2 border-purple-600 rounded-full animate-spin"></div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-sm sm:text-xl lg:text-2xl">⚛️</span>
-            </div>
-          </div>
+          </button>
         </div>
       </div>
+
     </section>
   );
 };

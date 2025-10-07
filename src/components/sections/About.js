@@ -1,24 +1,24 @@
 import Card from '@/components/ui/Card';
-import { HACKATHON_INFO } from '@/lib/constants';
+import { HACKATHON_INFO, EVALUATION_CRITERIA } from '@/lib/constants';
 
 const About = () => {
   const methodology = [
     {
       step: 1,
-      title: "Apply Now - Registration Open!",
+      title: "Register Now",
       description: "Applications are now open! Submit your application by October 31st. We're looking for motivated students and young researchers passionate about quantum computing.",
-      icon: "�"
+      icon: "🎓"
     },
     {
       step: 2,
-      title: "November Coursework", 
+      title: "Coursework", 
       description: "Selected applicants will complete OQI-led online quantum computing training throughout November. This intensive preparation covers quantum principles, programming, and practical applications.",
       icon: "📚"
     },
     {
       step: 3,
-      title: "Final Selection & Teams",
-      description: "49 participants will be chosen based on their performance in course work and dedication and grouped into 7 diverse teams of 7 members each.",
+      title: "Final Selection",
+      description: "49 participants will be chosen based on their performance in course work and dedication. Teams will be balanced by age and research gap to ensure diverse collaboration.",
       icon: "👥"
     },
     {
@@ -29,13 +29,13 @@ const About = () => {
     },
     {
       step: 5,
-      title: "Hackathon Competition",
+      title: "Competition",
       description: "During the 3-day event at NCP, teams will develop and present innovative quantum solutions.",
       icon: "💻"
     },
     {
       step: 6,
-      title: "Awards & Recognition",
+      title: "Prizes",
       description: "Winning teams will receive cash prizes, medals, long time mentoring, participation in national and international summer colleges and invitations to present at the International Natural Sciences Conference (INSC).",
       icon: "🏆"
     }
@@ -148,17 +148,17 @@ const About = () => {
           <h3 className="text-3xl font-bold text-purple-900 text-center mb-12">
             Competition Methodology
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {methodology.map((phase, index) => (
-              <Card key={index} variant="glass" className="text-center p-6 h-full">
-                <div className="text-4xl mb-4">{phase.icon}</div>
-                <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-4 text-sm font-bold">
+              <Card key={index} variant="glass" className="text-center p-4 sm:p-6 h-full">
+                <div className="text-2xl sm:text-4xl mb-3 sm:mb-4">{phase.icon}</div>
+                <div className="bg-purple-600 text-white rounded-full w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center mx-auto mb-3 sm:mb-4 text-xs sm:text-sm font-bold">
                   {phase.step}
                 </div>
-                <h4 className="text-lg font-bold text-purple-900 mb-3">
+                <h4 className="text-sm sm:text-lg font-bold text-purple-900 mb-2 sm:mb-3">
                   {phase.title}
                 </h4>
-                <p className="text-purple-700 text-sm leading-relaxed">
+                <p className="text-purple-700 text-xs sm:text-sm leading-relaxed">
                   {phase.description}
                 </p>
               </Card>
@@ -166,54 +166,48 @@ const About = () => {
           </div>
         </div>
 
-        {/* Who Can Apply */}
+        {/* Who Can Apply - Updated with Eligibility and Evaluation Criteria */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-purple-900 text-center mb-8">
-            Who Can Apply?
+            Eligibility & Evaluation
           </h3>
-          <div className="max-w-4xl mx-auto">
-            <Card variant="glass" className="p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="text-xl font-bold text-purple-900 mb-4 flex items-center gap-2">
-                    <span className="text-2xl">🎓</span>
-                    Eligibility Criteria
-                  </h4>
-                  <ul className="space-y-3">
-                    {eligibility.map((criteria, index) => (
-                      <li key={index} className="flex items-start gap-2 text-purple-700">
-                        <span className="text-purple-500 mt-1">•</span>
-                        <span className="text-sm leading-relaxed">{criteria}</span>
-                      </li>
-                    ))}
-                  </ul>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Eligibility Criteria */}
+              <Card variant="glass" className="p-8">
+                <h4 className="text-xl font-bold text-purple-900 mb-4 flex items-center gap-2">
+                  <span className="text-2xl">🎓</span>
+                  Eligibility Criteria
+                </h4>
+                <ul className="space-y-3">
+                  {eligibility.map((criteria, index) => (
+                    <li key={index} className="flex items-start gap-2 text-purple-700">
+                      <span className="text-purple-500 mt-1">•</span>
+                      <span className="text-sm leading-relaxed">{criteria}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+
+              {/* Evaluation Criteria */}
+              <Card variant="glass" className="p-8">
+                <h4 className="text-xl font-bold text-purple-900 mb-4 flex items-center gap-2">
+                  <span className="text-2xl">📊</span>
+                  Evaluation Criteria
+                </h4>
+                <div className="space-y-4">
+                  {EVALUATION_CRITERIA.map((criteria, index) => (
+                    <div key={index} className="border-b border-purple-200 pb-3 last:border-b-0">
+                      <div className="flex justify-between items-start mb-1">
+                        <span className="font-semibold text-purple-900 text-sm">{criteria.title}</span>
+                        <span className="text-purple-600 text-xs font-bold">{criteria.weight}</span>
+                      </div>
+                      <p className="text-purple-700 text-xs leading-relaxed">{criteria.description}</p>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <h4 className="text-xl font-bold text-purple-900 mb-4 flex items-center gap-2">
-                    <span className="text-2xl">📊</span>
-                    Selection Process
-                  </h4>
-                  <div className="space-y-4 text-sm text-purple-700">
-                    <div className="flex justify-between items-center py-2 border-b border-purple-200">
-                      <span>Applications</span>
-                      <span className="font-bold text-purple-900">Open to all</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-purple-200">
-                      <span>Shortlisted</span>
-                      <span className="font-bold text-purple-900">70 candidates</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-purple-200">
-                      <span>Final participants</span>
-                      <span className="font-bold text-purple-900">49 finalists</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2">
-                      <span>Team formation</span>
-                      <span className="font-bold text-purple-900">7 teams of 7</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </div>
           </div>
         </div>
 
@@ -228,7 +222,7 @@ const About = () => {
               through cutting-edge quantum technologies.
             </p>
             <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold px-8 py-3 rounded-full transition-all duration-200 transform hover:scale-105">
-              Apply Now - Registration Opens Soon
+              Apply Now
             </button>
           </Card>
         </div>

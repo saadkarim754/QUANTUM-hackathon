@@ -51,117 +51,147 @@ const Organizers = () => {
           </p>
         </div>
 
-        {/* Main Organizers */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
-          {ORGANIZERS.map((org, index) => (
-            <Card 
-              key={index}
-              variant="glass" 
-              className="p-6 sm:p-8 bg-purple-50 border-2 border-purple-200 hover:bg-purple-100 transition-all duration-300 transform hover:scale-105"
-            >
-              <div className="flex flex-col items-center text-center">
-                {/* Organization Logo */}
-                <div className="w-20 h-20 sm:w-24 sm:h-24 mb-4 sm:mb-6 flex items-center justify-center bg-white rounded-xl shadow-lg border border-gray-200 p-2">
-                  {org.name.includes('CERN') || org.name.includes('OQI') ? (
-                    <img 
-                      src="/images/sponsors/oqi-logo-scaled.webp" 
-                      alt="Open Quantum Institute (OQI) at CERN" 
-                      className="w-full h-full object-contain"
-                    />
-                  ) : org.name.includes('PIEAS') ? (
-                    <img 
-                      src="/images/sponsors/pieas.png" 
-                      alt="Pakistan Institute of Engineering and Applied Sciences" 
-                      className="w-full h-full object-contain"
-                    />
-                  ) : org.name.includes('NCP') ? (
-                    <img 
-                      src="/images/sponsors/ncp.png" 
-                      alt="National Center for Physics" 
-                      className="w-full h-full object-contain"
-                    />
-                  ) : org.name.includes('NILOP') ? (
-                    <img 
-                      src="/images/sponsors/Nilop.jpg" 
-                      alt="National Institute of Lasers and Optronics" 
-                      className="w-full h-full object-contain"
-                    />
-                  ) : (
-                    <span className="text-purple-600 font-bold text-sm sm:text-base">
-                      {org.name.split(' ').map(word => word[0]).slice(0, 3).join('')}
+        {/* Lead Organizers - Balanced Layout */}
+        <div className="mb-10 sm:mb-14">
+          <h3 className="text-2xl sm:text-3xl font-bold text-purple-900 text-center mb-6 sm:mb-8">
+            Lead Organizers
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
+            {ORGANIZERS.slice(0, 3).map((org, index) => (
+              <Card 
+                key={index}
+                variant="glass" 
+                className="p-4 sm:p-6 bg-purple-50 border-2 border-purple-200 hover:bg-purple-100 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="flex flex-col items-center text-center">
+                  {/* Organization Logo */}
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-4 flex items-center justify-center bg-white rounded-xl shadow-lg border border-gray-200 p-2">
+                    {org.name.includes('PIEAS') ? (
+                      <img 
+                        src="/images/sponsors/pieas.png" 
+                        alt="PIEAS" 
+                        className="w-full h-full object-contain"
+                      />
+                    ) : org.name.includes('NCP') ? (
+                      <img 
+                        src="/images/sponsors/ncp.png" 
+                        alt="NCP" 
+                        className="w-full h-full object-contain"
+                      />
+                    ) : org.name.includes('NILOP') ? (
+                      <img 
+                        src="/images/sponsors/Nilop.jpg" 
+                        alt="NILOP" 
+                        className="w-full h-full object-contain"
+                      />
+                    ) : (
+                      <span className="text-purple-600 font-bold text-sm">
+                        {org.name.split(' ').map(word => word[0]).slice(0, 3).join('')}
+                      </span>
+                    )}
+                  </div>
+                  
+                  {/* Organization Name */}
+                  <h4 className="text-base sm:text-lg font-bold text-purple-900 mb-2 sm:mb-3">
+                    {org.name.includes('PIEAS') ? 'PIEAS' : 
+                     org.name.includes('NCP') ? 'NCP' : 
+                     org.name.includes('NILOP') ? 'NILOP' : org.name}
+                  </h4>
+                  
+                  {/* Role */}
+                  <div className="bg-purple-200 border border-purple-300 rounded-lg px-3 py-1">
+                    <span className="text-purple-800 text-sm font-medium">
+                      {org.role}
                     </span>
-                  )}
+                  </div>
                 </div>
-                
-                {/* Organization Name */}
-                <h3 className="text-lg sm:text-xl font-bold text-purple-900 mb-2">
-                  {org.name}
-                </h3>
-                
-                {/* Role */}
-                <div className="bg-purple-200 border border-purple-300 rounded-lg px-3 py-1 mb-3 sm:mb-4">
-                  <span className="text-purple-800 text-xs sm:text-sm font-medium">
-                    {org.role}
-                  </span>
-                </div>
-                
-                {/* Description */}
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {org.description}
-                </p>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
         </div>
 
-        {/* Partnership Structure */}
-        {/* Partnership Structure */}
-        <div className="mb-12 sm:mb-16">
+        {/* Partners Section - Balanced */}
+        <div className="mb-10 sm:mb-14">
           <h3 className="text-2xl sm:text-3xl font-bold text-purple-900 text-center mb-6 sm:mb-8">
-            Partnership Structure
+            Partners
           </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
-            <Card variant="glass" className="p-4 sm:p-6 bg-purple-50 border-2 border-purple-200 text-center">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">�</div>
-              <h4 className="text-base sm:text-lg font-bold text-purple-900 mb-2 sm:mb-3">Host Institutions</h4>
-              <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
-                PIEAS, NILOP, and NCP provide venue, facilities, and local expertise
-              </p>
-              <div className="space-y-1 text-xs text-purple-700">
-                <div>• Event hosting & logistics</div>
-                <div>• Technical infrastructure</div>
-                <div>• Local mentorship</div>
-              </div>
-            </Card>
-
-            <Card variant="glass" className="p-4 sm:p-6 bg-blue-50 border-2 border-blue-200 text-center">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌍</div>
-              <h4 className="text-base sm:text-lg font-bold text-blue-900 mb-2 sm:mb-3">International Partner</h4>
-              <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
-                Open Quantum Institute (OQI) at CERN brings global quantum expertise
-              </p>
-              <div className="space-y-1 text-xs text-blue-700">
-                <div>• Quantum training programs</div>
-                <div>• International standards</div>
-                <div>• Global networking</div>
-              </div>
-            </Card>
-
-            <Card variant="glass" className="p-4 sm:p-6 bg-green-50 border-2 border-green-200 text-center">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤝</div>
-              <h4 className="text-base sm:text-lg font-bold text-green-900 mb-2 sm:mb-3">Collaborative Vision</h4>
-              <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
-                United commitment to advancing Pakistan's quantum capabilities
-              </p>
-              <div className="space-y-1 text-xs text-green-700">
-                <div>• National capacity building</div>
-                <div>• Research collaboration</div>
-                <div>• Student development</div>
-              </div>
-            </Card>
+          <div className="max-w-3xl mx-auto">
+            {/* First Row - 3 partners */}
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6">
+              <Card variant="glass" className="p-3 sm:p-4 bg-blue-50 border-2 border-blue-200 text-center hover:bg-blue-100 transition-all duration-300">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
+                  <img 
+                    src="https://logos-world.net/wp-content/uploads/2020/09/IBM-Logo.png" 
+                    alt="IBM" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <h4 className="text-sm sm:text-base font-bold text-blue-900">IBM</h4>
+              </Card>
+              
+              <Card variant="glass" className="p-3 sm:p-4 bg-green-50 border-2 border-green-200 text-center hover:bg-green-100 transition-all duration-300">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
+                  <img 
+                    src="/images/sponsors/LUMS.png" 
+                    alt="LUMS" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <h4 className="text-sm sm:text-base font-bold text-green-900">LUMS</h4>
+              </Card>
+              
+              <Card variant="glass" className="p-3 sm:p-4 bg-indigo-50 border-2 border-indigo-200 text-center hover:bg-indigo-100 transition-all duration-300">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
+                  <span className="text-indigo-600 font-bold text-sm">NCQC</span>
+                </div>
+                <h4 className="text-sm sm:text-base font-bold text-indigo-900">NCQC</h4>
+              </Card>
+            </div>
+            
+            {/* Second Row - 2 partners (centered) */}
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-md mx-auto">
+              <Card variant="glass" className="p-3 sm:p-4 bg-purple-50 border-2 border-purple-200 text-center hover:bg-purple-100 transition-all duration-300">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
+                  <span className="text-purple-600 font-bold text-sm">GESDA</span>
+                </div>
+                <h4 className="text-sm sm:text-base font-bold text-purple-900">GESDA</h4>
+              </Card>
+              
+              <Card variant="glass" className="p-3 sm:p-4 bg-cyan-50 border-2 border-cyan-200 text-center hover:bg-cyan-100 transition-all duration-300">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
+                  <img 
+                    src="/images/sponsors/oqi-logo-scaled.webp" 
+                    alt="OQI" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <h4 className="text-sm sm:text-base font-bold text-cyan-900">OQI</h4>
+              </Card>
+            </div>
           </div>
-        </div>        {/* Project Leadership */}
+        </div>
+
+        {/* Sponsors Section - Balanced */}
+        <div className="mb-10 sm:mb-14">
+          <h3 className="text-2xl sm:text-3xl font-bold text-purple-900 text-center mb-6 sm:mb-8">
+            Sponsors
+          </h3>
+          <Card variant="glass" className="max-w-2xl mx-auto p-6 sm:p-8 bg-gradient-to-r from-purple-100 to-indigo-100 border-2 border-purple-200 text-center">
+            <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤝</div>
+            <h4 className="text-lg sm:text-xl font-bold text-purple-900 mb-3 sm:mb-4">
+              Become a Sponsor
+            </h4>
+            <p className="text-gray-700 mb-4 sm:mb-6 text-sm leading-relaxed">
+              Join us in supporting Pakistan's quantum computing future. Sponsorship opportunities available 
+              for organizations wanting to support quantum education and research.
+            </p>
+            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold px-6 sm:px-8 py-3 rounded-full transition-all duration-200 transform hover:scale-105 text-sm">
+              Partner With Us
+            </button>
+          </Card>
+        </div>
+
+        {/* Project Leadership */}
         <div className="mb-12 sm:mb-16">
           <Card variant="glass" className="max-w-4xl mx-auto p-6 sm:p-8 bg-indigo-50 border-2 border-indigo-200">
             <h3 className="text-xl sm:text-2xl font-bold text-indigo-900 text-center mb-6 sm:mb-8">
