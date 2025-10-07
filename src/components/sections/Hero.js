@@ -133,9 +133,11 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -mt-2 sm:-mt-1">
         {/* Apply Now Button */}
         <div className="mb-1 sm:mb-2">
-          <button className="bg-gradient-to-r from-orange-500 via-purple-600 to-orange-500 bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700 text-white font-bold px-8 sm:px-12 py-4 sm:py-5 rounded-full text-base sm:text-lg shadow-lg transform hover:scale-105 animate-pulse">
-            🚀 Apply Now
-          </button>
+          <a href="/register">
+            <button className="bg-gradient-to-r from-orange-500 via-purple-600 to-orange-500 bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700 text-white font-bold px-8 sm:px-12 py-4 sm:py-5 rounded-full text-base sm:text-lg shadow-lg transform hover:scale-105 animate-pulse">
+              🚀 Apply Now
+            </button>
+          </a>
         </div>
         
         {/* Days Left Counter */}

@@ -199,9 +199,11 @@ const About = () => {
               Join Pakistan's quantum revolution and contribute to solving real-world challenges 
               through cutting-edge quantum technologies.
             </p>
-            <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold px-8 py-3 rounded-full transition-all duration-200 transform hover:scale-105">
-              Apply Now
-            </button>
+            <a href="/register">
+              <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold px-8 py-3 rounded-full transition-all duration-200 transform hover:scale-105">
+                Apply Now
+              </button>
+            </a>
           </Card>
         </div>
 

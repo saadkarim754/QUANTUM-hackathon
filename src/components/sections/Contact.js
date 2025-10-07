@@ -119,12 +119,12 @@ const Contact = () => {
                 required
                 className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent text-sm"
               >
-                <option value="">Select a topic</option>
-                <option value="registration">Registration Questions</option>
-                <option value="eligibility">Eligibility Requirements</option>
-                <option value="technical">Technical Questions</option>
-                <option value="partnership">Partnership Opportunities</option>
-                <option value="general">General Inquiry</option>
+                <option value="" className="bg-gray-800 text-white">Select a topic</option>
+                <option value="registration" className="bg-gray-800 text-white">Registration Questions</option>
+                <option value="eligibility" className="bg-gray-800 text-white">Eligibility Requirements</option>
+                <option value="technical" className="bg-gray-800 text-white">Technical Questions</option>
+                <option value="partnership" className="bg-gray-800 text-white">Partnership Opportunities</option>
+                <option value="general" className="bg-gray-800 text-white">General Inquiry</option>
               </select>
             </div>
             

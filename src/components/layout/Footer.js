@@ -119,6 +119,13 @@ const Footer = () => {
               <span className="text-xl">🤝</span>
               <span className="ml-2 text-sm">Partner With Us</span>
             </button>
+            <a 
+              href="/admin-login"
+              className="text-purple-200 hover:text-white transition-colors duration-200 text-sm bg-white/10 px-3 py-1 rounded-lg border border-white/20 hover:bg-white/20"
+            >
+              <span className="text-sm">🔐</span>
+              <span className="ml-1">Admin</span>
+            </a>
           </div>
           
           <div className="text-center sm:text-right">
