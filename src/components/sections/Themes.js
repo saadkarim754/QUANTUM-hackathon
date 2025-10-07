@@ -41,32 +41,127 @@ const Themes = () => {
         </div>
 
         {/* SDG Themes Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {SDG_THEMES.map((theme, index) => (
-            <Card 
-              key={index} 
-              variant="glass" 
-              className="p-6 bg-white/10 backdrop-blur-md border-white/20 text-center hover:bg-white/15 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
-            >
-              {/* Theme Icon */}
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                {theme.icon}
-              </div>
+                {/* SDG Themes Grid - Mobile: 3,3,2 pattern */}
+        <div className="mb-16">
+          {/* First row - 3 cards */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 sm:gap-6 mb-3 sm:mb-6">
+            {SDG_THEMES.slice(0, 3).map((theme, index) => (
+              <Card 
+                key={index} 
+                variant="glass" 
+                className="p-3 sm:p-6 bg-white/10 backdrop-blur-md border-white/20 text-center hover:bg-white/15 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
+              >
+                {/* Theme Icon */}
+                <div className="text-2xl sm:text-4xl mb-2 sm:mb-4 transition-transform duration-300 group-hover:scale-110">
+                  {theme.icon}
+                </div>
+                
+                {/* Theme Title */}
+                <h3 className="font-bold text-white text-xs sm:text-lg mb-2 sm:mb-3 leading-tight group-hover:text-purple-200 transition-colors">
+                  {theme.title}
+                </h3>
+                
+                {/* Theme Description - hidden on mobile */}
+                <p className="text-purple-200 text-xs sm:text-sm leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity hidden sm:block">
+                  {theme.description}
+                </p>
+                
+                {/* Color accent */}
+                <div className={`w-8 sm:w-12 h-1 ${theme.color} mx-auto mt-2 sm:mt-4 rounded-full opacity-60 group-hover:opacity-100 transition-opacity`}></div>
+              </Card>
+            ))}
+            
+            {/* Fill remaining space on desktop */}
+            <div className="hidden sm:block">
+              <Card 
+                variant="glass" 
+                className="p-3 sm:p-6 bg-white/10 backdrop-blur-md border-white/20 text-center hover:bg-white/15 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
+              >
+                <div className="text-2xl sm:text-4xl mb-2 sm:mb-4 transition-transform duration-300 group-hover:scale-110">
+                  {SDG_THEMES[3].icon}
+                </div>
+                <h3 className="font-bold text-white text-xs sm:text-lg mb-2 sm:mb-3 leading-tight group-hover:text-purple-200 transition-colors">
+                  {SDG_THEMES[3].title}
+                </h3>
+                <p className="text-purple-200 text-xs sm:text-sm leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity hidden sm:block">
+                  {SDG_THEMES[3].description}
+                </p>
+                <div className={`w-8 sm:w-12 h-1 ${SDG_THEMES[3].color} mx-auto mt-2 sm:mt-4 rounded-full opacity-60 group-hover:opacity-100 transition-opacity`}></div>
+              </Card>
+            </div>
+          </div>
+          
+          {/* Second row - 3 cards on mobile, continue grid on desktop */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 sm:gap-6 mb-3 sm:mb-0">
+            {SDG_THEMES.slice(4, 7).map((theme, index) => (
+              <Card 
+                key={index + 4} 
+                variant="glass" 
+                className="p-3 sm:p-6 bg-white/10 backdrop-blur-md border-white/20 text-center hover:bg-white/15 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
+              >
+                <div className="text-2xl sm:text-4xl mb-2 sm:mb-4 transition-transform duration-300 group-hover:scale-110">
+                  {theme.icon}
+                </div>
+                <h3 className="font-bold text-white text-xs sm:text-lg mb-2 sm:mb-3 leading-tight group-hover:text-purple-200 transition-colors">
+                  {theme.title}
+                </h3>
+                <p className="text-purple-200 text-xs sm:text-sm leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity hidden sm:block">
+                  {theme.description}
+                </p>
+                <div className={`w-8 sm:w-12 h-1 ${theme.color} mx-auto mt-2 sm:mt-4 rounded-full opacity-60 group-hover:opacity-100 transition-opacity`}></div>
+              </Card>
+            ))}
+            
+            {/* Last card on desktop */}
+            <div className="hidden sm:block">
+              <Card 
+                variant="glass" 
+                className="p-3 sm:p-6 bg-white/10 backdrop-blur-md border-white/20 text-center hover:bg-white/15 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
+              >
+                <div className="text-2xl sm:text-4xl mb-2 sm:mb-4 transition-transform duration-300 group-hover:scale-110">
+                  {SDG_THEMES[7].icon}
+                </div>
+                <h3 className="font-bold text-white text-xs sm:text-lg mb-2 sm:mb-3 leading-tight group-hover:text-purple-200 transition-colors">
+                  {SDG_THEMES[7].title}
+                </h3>
+                <p className="text-purple-200 text-xs sm:text-sm leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity hidden sm:block">
+                  {SDG_THEMES[7].description}
+                </p>
+                <div className={`w-8 sm:w-12 h-1 ${SDG_THEMES[7].color} mx-auto mt-2 sm:mt-4 rounded-full opacity-60 group-hover:opacity-100 transition-opacity`}></div>
+              </Card>
+            </div>
+          </div>
+          
+          {/* Third row - 2 cards centered on mobile */}
+          <div className="sm:hidden">
+            <div className="grid grid-cols-2 gap-3 justify-center max-w-xs mx-auto mt-3">
+              <Card 
+                variant="glass" 
+                className="p-3 bg-white/10 backdrop-blur-md border-white/20 text-center hover:bg-white/15 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
+              >
+                <div className="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110">
+                  {SDG_THEMES[3].icon}
+                </div>
+                <h3 className="font-bold text-white text-xs mb-2 leading-tight group-hover:text-purple-200 transition-colors">
+                  {SDG_THEMES[3].title}
+                </h3>
+                <div className={`w-8 h-1 ${SDG_THEMES[3].color} mx-auto mt-2 rounded-full opacity-60 group-hover:opacity-100 transition-opacity`}></div>
+              </Card>
               
-              {/* Theme Title */}
-              <h3 className="text-lg font-bold text-white mb-3 group-hover:text-purple-200 transition-colors">
-                {theme.title}
-              </h3>
-              
-              {/* Theme Description */}
-              <p className="text-purple-200 text-sm leading-relaxed mb-4">
-                {theme.description}
-              </p>
-              
-              {/* Color indicator */}
-              <div className={`w-full h-2 rounded-full ${theme.color} opacity-60 group-hover:opacity-80 transition-opacity`}></div>
-            </Card>
-          ))}
+              <Card 
+                variant="glass" 
+                className="p-3 bg-white/10 backdrop-blur-md border-white/20 text-center hover:bg-white/15 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
+              >
+                <div className="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110">
+                  {SDG_THEMES[7].icon}
+                </div>
+                <h3 className="font-bold text-white text-xs mb-2 leading-tight group-hover:text-purple-200 transition-colors">
+                  {SDG_THEMES[7].title}
+                </h3>
+                <div className={`w-8 h-1 ${SDG_THEMES[7].color} mx-auto mt-2 rounded-full opacity-60 group-hover:opacity-100 transition-opacity`}></div>
+              </Card>
+            </div>
+          </div>
         </div>
 
         {/* Challenge Examples */}

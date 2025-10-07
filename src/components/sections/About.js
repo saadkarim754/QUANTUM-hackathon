@@ -1,7 +1,12 @@
+'use client';
+
+import { useState } from 'react';
 import Card from '@/components/ui/Card';
 import { HACKATHON_INFO, EVALUATION_CRITERIA } from '@/lib/constants';
 
 const About = () => {
+  const [selectedStep, setSelectedStep] = useState(null);
+  
   const methodology = [
     {
       step: 1,
@@ -148,23 +153,64 @@ const About = () => {
           <h3 className="text-3xl font-bold text-purple-900 text-center mb-12">
             Competition Methodology
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {methodology.map((phase, index) => (
-              <Card key={index} variant="glass" className="text-center p-4 sm:p-6 h-full">
-                <div className="text-2xl sm:text-4xl mb-3 sm:mb-4">{phase.icon}</div>
-                <div className="bg-purple-600 text-white rounded-full w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center mx-auto mb-3 sm:mb-4 text-xs sm:text-sm font-bold">
-                  {phase.step}
-                </div>
-                <h4 className="text-sm sm:text-lg font-bold text-purple-900 mb-2 sm:mb-3">
-                  {phase.title}
-                </h4>
-                <p className="text-purple-700 text-xs sm:text-sm leading-relaxed">
-                  {phase.description}
-                </p>
-              </Card>
+          
+          {/* Mobile: 2 rows with 3 cards each, Desktop: single row */}
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-6 mb-8">
+            {methodology.map((step, index) => (
+              <div key={index} className="relative">
+                <Card 
+                  className="p-3 sm:p-6 text-center cursor-pointer transition-all duration-200 hover:shadow-lg transform hover:scale-105 bg-gradient-to-br from-purple-50 to-indigo-50 border-purple-200 h-full"
+                  onClick={() => setSelectedStep(step)}
+                >
+                  <div className="text-2xl sm:text-4xl mb-2 sm:mb-4">{step.icon}</div>
+                  <div className="bg-purple-600 text-white rounded-full w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm font-bold mx-auto mb-2 sm:mb-3">
+                    {step.step}
+                  </div>
+                  <h4 className="font-semibold text-purple-900 text-xs sm:text-base mb-1 sm:mb-2 leading-tight">
+                    {step.title}
+                  </h4>
+                  <p className="text-purple-700 text-xs sm:text-sm leading-relaxed hidden sm:block">
+                    {step.description.substring(0, 80)}...
+                  </p>
+                  <button className="text-purple-600 text-xs font-medium mt-1 sm:hidden">
+                    Tap for details
+                  </button>
+                </Card>
+                
+                {/* Connection line for desktop */}
+                {index < methodology.length - 1 && (
+                  <div className="hidden sm:block absolute top-1/2 -right-3 w-6 h-0.5 bg-purple-300 transform -translate-y-1/2"></div>
+                )}
+              </div>
             ))}
           </div>
         </div>
+
+        {/* Modal for step details */}
+        {selectedStep && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={() => setSelectedStep(null)}>
+            <div className="bg-white rounded-lg p-6 max-w-md w-full" onClick={(e) => e.stopPropagation()}>
+              <div className="text-center mb-4">
+                <div className="text-4xl mb-3">{selectedStep.icon}</div>
+                <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mx-auto mb-3">
+                  {selectedStep.step}
+                </div>
+                <h4 className="font-bold text-purple-900 text-lg mb-2">
+                  {selectedStep.title}
+                </h4>
+              </div>
+              <p className="text-purple-700 text-sm leading-relaxed mb-6">
+                {selectedStep.description}
+              </p>
+              <button 
+                onClick={() => setSelectedStep(null)}
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Who Can Apply - Eligibility Criteria Only */}
         <div className="mb-16">

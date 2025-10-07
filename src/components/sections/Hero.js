@@ -86,7 +86,7 @@ const Hero = () => {
         <div className="absolute bottom-1/5 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping" style={{animationDelay: '4s'}}></div>
       </div>
       {/* Canvas-style Title Section with Team Image Background */}
-      <div className="relative w-full max-w-6xl mx-auto h-48 sm:h-80 lg:h-96 mb-4 sm:mb-12 overflow-hidden rounded-lg shadow-xl px-4 sm:px-8">
+      <div className="relative w-full max-w-6xl mx-auto h-56 sm:h-80 lg:h-96 mb-6 sm:mb-12 overflow-hidden rounded-lg shadow-xl px-4 sm:px-8 -mt-8 sm:mt-0">
         <div className="w-full h-full relative overflow-hidden rounded-lg">
           {/* Team Image Background */}
           <div 
@@ -106,21 +106,21 @@ const Hero = () => {
           {/* Title Content */}
           <div className="relative z-10 h-full flex items-center justify-center px-2 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl">
-              <h1 className="text-lg sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1 sm:mb-4 text-white leading-tight drop-shadow-2xl">
+              <h1 className="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-4 text-white leading-tight drop-shadow-2xl">
                 {HACKATHON_INFO.title}
               </h1>
-              <p className="text-xs sm:text-base lg:text-lg text-white/90 leading-relaxed drop-shadow-lg mb-4 sm:mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 leading-relaxed drop-shadow-lg mb-4 sm:mb-6">
                 {HACKATHON_INFO.subtitle}
               </p>
               
               {/* Event Details inside card */}
               <div className="space-y-2 sm:space-y-3">
-                <p className="text-xs sm:text-base text-white/95 flex items-center justify-center gap-2 font-semibold">
-                  <span className="text-sm sm:text-xl">📅</span>
+                <p className="text-sm sm:text-base text-white/95 flex items-center justify-center gap-2 font-semibold">
+                  <span className="text-lg sm:text-xl">📅</span>
                   <span className="leading-relaxed">{HACKATHON_INFO.dates}</span>
                 </p>
-                <p className="text-xs sm:text-base text-white/95 flex items-center justify-center gap-2">
-                  <span className="text-sm sm:text-xl">📍</span>
+                <p className="text-sm sm:text-base text-white/95 flex items-center justify-center gap-2">
+                  <span className="text-lg sm:text-xl">📍</span>
                   <span className="leading-relaxed text-center">NCP, Islamabad</span>
                 </p>
               </div>
@@ -132,9 +132,9 @@ const Hero = () => {
       {/* Apply Now Button and Days Counter - Outside the title card */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -mt-2 sm:-mt-1">
         {/* Apply Now Button */}
-        <div className="mb-1 sm:mb-2">
+        <div className="mb-3 sm:mb-2">
           <a href="/register">
-            <button className="bg-gradient-to-r from-orange-500 via-purple-600 to-orange-500 bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700 text-white font-bold px-8 sm:px-12 py-4 sm:py-5 rounded-full text-base sm:text-lg shadow-lg transform hover:scale-105 animate-pulse">
+            <button className="bg-gradient-to-r from-orange-500 via-purple-600 to-orange-500 bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700 text-white font-bold px-10 sm:px-12 py-5 sm:py-5 rounded-full text-lg sm:text-lg shadow-lg transform hover:scale-105 animate-pulse">
               🚀 Apply Now
             </button>
           </a>
@@ -142,12 +142,12 @@ const Hero = () => {
         
         {/* Days Left Counter */}
         {daysUntil && daysUntil > 0 && (
-          <div className="inline-block bg-gradient-to-r from-red-100 to-orange-100 border-2 border-red-200 rounded-xl p-3 sm:p-6 mb-1 sm:mb-2">
-            <p className="text-red-700 mb-1 sm:mb-2 font-medium text-xs leading-relaxed">Registration closes in</p>
-            <p className="text-xl sm:text-3xl lg:text-4xl font-bold text-red-900 leading-tight mb-1">
+          <div className="inline-block bg-gradient-to-r from-red-100 to-orange-100 border-2 border-red-200 rounded-xl p-4 sm:p-6 mb-3 sm:mb-2">
+            <p className="text-red-700 mb-1 sm:mb-2 font-medium text-sm leading-relaxed">Registration closes in</p>
+            <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-red-900 leading-tight mb-1">
               {daysUntil} days
             </p>
-            <p className="text-orange-700 text-xs font-medium">Apply by Oct 31</p>
+            <p className="text-orange-700 text-sm font-medium">Apply by Oct 31</p>
           </div>
         )}
         
@@ -155,7 +155,7 @@ const Hero = () => {
         <div>
           <button 
             onClick={() => scrollToSection('about')}
-            className="bg-purple-100 hover:bg-purple-200 text-purple-700 hover:text-purple-800 font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base border border-purple-200 hover:border-purple-300 transition-all duration-200 transform hover:scale-105"
+            className="bg-purple-100 hover:bg-purple-200 text-purple-700 hover:text-purple-800 font-medium px-8 sm:px-8 py-3 sm:py-3 rounded-full text-base sm:text-base border border-purple-200 hover:border-purple-300 transition-all duration-200 transform hover:scale-105"
           >
             📋 Learn More
           </button>

@@ -25,23 +25,25 @@ const Prizes = () => {
           </p>
         </div>
 
-        {/* Main Prizes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12 max-w-4xl mx-auto">
+        {/* Main Prizes - Mobile: 1 row with 3 compact cards */}
+        <div className="grid grid-cols-3 gap-2 sm:gap-6 mb-8 sm:mb-12 max-w-4xl mx-auto">
           {PRIZES.map((prize, index) => (
             <Card 
               key={index}
               variant="glass" 
-              className={`p-4 sm:p-6 bg-white/10 backdrop-blur-md border-white/20 text-center transform transition-all duration-300 hover:scale-105 hover:bg-white/15 ${
-                index === 0 ? 'md:scale-105 ring-2 ring-yellow-400/50' : ''
+              className={`p-2 sm:p-6 bg-white/10 backdrop-blur-md border-white/20 text-center transform transition-all duration-300 hover:scale-105 hover:bg-white/15 ${
+                index === 0 ? 'sm:scale-105 ring-1 sm:ring-2 ring-yellow-400/50' : ''
               }`}
             >
               {/* Prize Icon */}
-              <div className={`text-3xl sm:text-5xl mb-3 sm:mb-4 ${index === 0 ? 'animate-bounce' : 'hover:scale-110 transition-transform'}`}>
+              <div className={`text-2xl sm:text-5xl mb-1 sm:mb-4 ${
+                index === 0 ? 'animate-bounce' : 'hover:scale-110 transition-transform'
+              }`}>
                 {prize.icon}
               </div>
               
               {/* Prize Position */}
-              <h3 className={`text-lg sm:text-xl font-bold mb-2 ${
+              <h3 className={`text-xs sm:text-xl font-bold mb-1 sm:mb-2 ${
                 index === 0 ? 'text-yellow-300' : 
                 index === 1 ? 'text-gray-300' : 
                 'text-orange-300'
@@ -50,7 +52,7 @@ const Prizes = () => {
               </h3>
               
               {/* Prize Details */}
-              <p className="text-white text-sm sm:text-base font-semibold mb-3">
+              <p className="text-white text-xs sm:text-base font-semibold mb-1 sm:mb-3 leading-tight">
                 {prize.prize}
               </p>
               

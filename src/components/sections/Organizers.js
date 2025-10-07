@@ -56,16 +56,16 @@ const Organizers = () => {
           <h3 className="text-2xl sm:text-3xl font-bold text-purple-900 text-center mb-6 sm:mb-8">
             Lead Organizers
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-3 gap-2 sm:gap-6 max-w-4xl mx-auto">
             {ORGANIZERS.slice(0, 3).map((org, index) => (
               <Card 
                 key={index}
                 variant="glass" 
-                className="p-4 sm:p-6 bg-purple-50 border-2 border-purple-200 hover:bg-purple-100 transition-all duration-300 transform hover:scale-105"
+                className="p-2 sm:p-6 bg-purple-50 border border-purple-200 hover:bg-purple-100 transition-all duration-300 transform hover:scale-105"
               >
                 <div className="flex flex-col items-center text-center">
                   {/* Organization Logo */}
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-4 flex items-center justify-center bg-white rounded-xl shadow-lg border border-gray-200 p-2">
+                  <div className="w-10 h-10 sm:w-20 sm:h-20 mb-2 sm:mb-4 flex items-center justify-center bg-white rounded-lg sm:rounded-xl shadow-sm sm:shadow-lg border border-gray-200 p-1 sm:p-2">
                     {org.name.includes('PIEAS') ? (
                       <img 
                         src="/images/sponsors/pieas.png" 
@@ -92,15 +92,15 @@ const Organizers = () => {
                   </div>
                   
                   {/* Organization Name */}
-                  <h4 className="text-base sm:text-lg font-bold text-purple-900 mb-2 sm:mb-3">
+                  <h4 className="text-xs sm:text-lg font-bold text-purple-900 mb-1 sm:mb-3 leading-tight">
                     {org.name.includes('PIEAS') ? 'PIEAS' : 
                      org.name.includes('NCP') ? 'NCP' : 
                      org.name.includes('NILOP') ? 'NILOP' : org.name}
                   </h4>
                   
                   {/* Role */}
-                  <div className="bg-purple-200 border border-purple-300 rounded-lg px-3 py-1">
-                    <span className="text-purple-800 text-sm font-medium">
+                  <div className="bg-purple-200 border border-purple-300 rounded px-2 py-1 sm:rounded-lg sm:px-3 sm:py-1">
+                    <span className="text-purple-800 text-xs sm:text-sm font-medium">
                       {org.role}
                     </span>
                   </div>
