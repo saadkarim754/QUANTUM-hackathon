@@ -177,8 +177,8 @@ const RegisterPage = () => {
           <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Quantum Hackathon Registration
           </h1>
-          <p className="text-purple-200 max-w-2xl mx-auto">
-            Join Pakistan's first quantum computing hackathon. Fill out the form below to apply.
+          <p className="text-purple-700 max-w-2xl mx-auto">
+            Join Pakistan's first quantum computing hackathon. Fill out the form below to apply. 
           </p>
         </div>
 
