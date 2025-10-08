@@ -67,7 +67,7 @@ const Contact = () => {
 
         {/* Contact Form */}
         <Card variant="glass" className="p-6 sm:p-8 bg-white/10 backdrop-blur-md border-white/20">
-          <h3 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6 text-center">
+          <h3 className="text-base sm:text-lg font-bold text-white mb-4 sm:mb-6 text-center">
             Ask a Question
           </h3>
           

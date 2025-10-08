@@ -29,7 +29,7 @@ const Navigation = () => {
             <img 
               src="/images/sponsors/competetion-logo.png" 
               alt="Quantum Computing Hackathon Pakistan" 
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
             <span className="text-purple-900 font-semibold text-lg hidden sm:block">
               Quantum Hackathon Pakistan
