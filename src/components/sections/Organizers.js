@@ -111,17 +111,6 @@ const Organizers = () => {
           <div className="max-w-3xl mx-auto">
             {/* First Row - 3 partners */}
             <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6">
-              <Card variant="glass" className="p-3 sm:p-4 bg-blue-50 border-2 border-blue-200 text-center hover:bg-blue-100 transition-all duration-300">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
-                  <img 
-                    src="https://logos-world.net/wp-content/uploads/2020/09/IBM-Logo.png" 
-                    alt="IBM" 
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <h4 className="text-sm sm:text-base font-bold text-blue-900">IBM</h4>
-              </Card>
-              
               <Card variant="glass" className="p-3 sm:p-4 bg-green-50 border-2 border-green-200 text-center hover:bg-green-100 transition-all duration-300">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
                   <img 
@@ -139,18 +128,18 @@ const Organizers = () => {
                 </div>
                 <h4 className="text-sm sm:text-base font-bold text-indigo-900">NCQC</h4>
               </Card>
-            </div>
-            
-            {/* Second Row - 2 partners (centered) */}
-            <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-md mx-auto">
+              
               <Card variant="glass" className="p-3 sm:p-4 bg-purple-50 border-2 border-purple-200 text-center hover:bg-purple-100 transition-all duration-300">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
                   <span className="text-purple-600 font-bold text-sm">GESDA</span>
                 </div>
                 <h4 className="text-sm sm:text-base font-bold text-purple-900">GESDA</h4>
               </Card>
-              
-              <Card variant="glass" className="p-3 sm:p-4 bg-cyan-50 border-2 border-cyan-200 text-center hover:bg-cyan-100 transition-all duration-300">
+            </div>
+            
+            {/* Second Row - 1 partner (centered) */}
+            <div className="flex justify-center">
+              <Card variant="glass" className="p-3 sm:p-4 bg-cyan-50 border-2 border-cyan-200 text-center hover:bg-cyan-100 transition-all duration-300 w-48">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
                   <img 
                     src="/images/sponsors/oqi-logo-scaled.webp" 
@@ -213,6 +202,14 @@ const Organizers = () => {
                   and OQI Liaison, bringing together national institutions and international 
                   expertise to advance quantum education and research in Pakistan.
                 </p>
+                <div className="mb-3">
+                  <a 
+                    href={`mailto:${CONTACT_INFO.projectManager.email}`}
+                    className="text-indigo-600 hover:text-indigo-800 text-sm font-medium underline"
+                  >
+                    {CONTACT_INFO.projectManager.email}
+                  </a>
+                </div>
                 <div className="bg-indigo-200 border border-indigo-300 rounded-lg px-4 py-2 inline-block">
                   <span className="text-indigo-800 text-sm font-medium">
                     Project Manager & OQI Liaison

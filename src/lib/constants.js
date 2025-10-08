@@ -180,7 +180,7 @@ export const CONTACT_INFO = {
   projectManager: {
     name: "Dr. Manzoor Ikram",
     title: "Director General, NILOP",
-    email: "director@nilop.org.pk" // placeholder email
+    email: "manzoor_fasihi@yahoo.com"
   }
 };
 
