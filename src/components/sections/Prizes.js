@@ -35,23 +35,16 @@ const Prizes = () => {
                 index === 0 ? 'sm:scale-105 ring-1 sm:ring-2 ring-yellow-400/50' : ''
               }`}
             >
-              {/* Prize Icon */}
-              <div className={`text-2xl sm:text-5xl mb-1 sm:mb-4 ${
-                index === 0 ? 'animate-bounce' : 'hover:scale-110 transition-transform'
+              {/* Prize Icon - Larger colored numbers */}
+              <div className={`text-4xl sm:text-6xl font-bold mb-2 sm:mb-4 ${
+                index === 0 ? 'text-yellow-400 animate-bounce' : 
+                index === 1 ? 'text-gray-300 hover:scale-110 transition-transform' : 
+                'text-orange-400 hover:scale-110 transition-transform'
               }`}>
                 {prize.icon}
               </div>
               
-              {/* Prize Position */}
-              <h3 className={`text-xs sm:text-xl font-bold mb-1 sm:mb-2 ${
-                index === 0 ? 'text-yellow-300' : 
-                index === 1 ? 'text-gray-300' : 
-                'text-orange-300'
-              }`}>
-                {prize.position}
-              </h3>
-              
-              {/* Prize Details */}
+              {/* Prize Details - Removed duplicate position text */}
               <p className="text-white text-xs sm:text-base font-semibold mb-1 sm:mb-3 leading-tight">
                 {prize.prize}
               </p>
@@ -59,7 +52,7 @@ const Prizes = () => {
               {/* Special highlight for 1st place */}
               {index === 0 && (
                 <div className="bg-yellow-500/20 border border-yellow-400/30 rounded-lg px-2 py-1">
-                  <span className="text-yellow-200 text-xs font-medium">👑 Grand Champion</span>
+                  <span className="text-yellow-200 text-xs font-medium">Grand Champion</span>
                 </div>
               )}
             </Card>

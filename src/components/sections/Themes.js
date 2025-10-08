@@ -36,7 +36,7 @@ const Themes = () => {
             for real-world challenges.
           </p>
           <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-white/20">
-            <span className="text-white font-medium">🎯 Choose from 8 Challenge Areas</span>
+            <span className="text-white font-medium">Choose from 8 Challenge Areas</span>
           </div>
         </div>
 
@@ -215,7 +215,7 @@ const Themes = () => {
 
             <Card variant="glass" className="p-8 bg-white/10 backdrop-blur-md border-white/20">
               <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="text-2xl">📚</span>
+                <span className="text-2xl font-bold text-purple-600">L</span>
                 Education Technology
               </h4>
               <ul className="space-y-2 text-purple-200 text-sm">
@@ -270,13 +270,13 @@ const Themes = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="bg-purple-500/20 border border-purple-400/30 rounded-lg px-4 py-2">
-                <span className="text-purple-200 font-medium">💡 Quantum Innovation</span>
+                <span className="text-purple-200 font-medium">Quantum Innovation</span>
               </div>
               <div className="bg-pink-500/20 border border-pink-400/30 rounded-lg px-4 py-2">
-                <span className="text-pink-200 font-medium">🌍 Local Impact</span>
+                <span className="text-pink-200 font-medium">Local Impact</span>
               </div>
               <div className="bg-indigo-500/20 border border-indigo-400/30 rounded-lg px-4 py-2">
-                <span className="text-indigo-200 font-medium">🚀 Global Relevance</span>
+                <span className="text-indigo-200 font-medium">Global Relevance</span>
               </div>
             </div>
           </Card>

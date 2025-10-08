@@ -12,37 +12,37 @@ const About = () => {
       step: 1,
       title: "Register Now",
       description: "Applications are now open! Submit your application by October 31st. We're looking for motivated students and young researchers passionate about quantum computing.",
-      icon: "🎓"
+      icon: ""
     },
     {
       step: 2,
       title: "Coursework", 
       description: "Selected applicants will complete OQI-led online quantum computing training throughout November. This intensive preparation covers quantum principles, programming, and practical applications.",
-      icon: "📚"
+      icon: ""
     },
     {
       step: 3,
       title: "Final Selection",
       description: "49 participants will be chosen based on their performance in course work and dedication. Teams will be balanced by age and research gap to ensure diverse collaboration.",
-      icon: "👥"
+      icon: ""
     },
     {
       step: 4,
       title: "Orientation & Mentorship",
       description: "Teams will be introduced to the hackathon format, SDG-driven challenges, and assigned expert mentors.",
-      icon: "🎯"
+      icon: ""
     },
     {
       step: 5,
       title: "Competition",
       description: "During the 3-day event at NCP, teams will develop and present innovative quantum solutions.",
-      icon: "💻"
+      icon: ""
     },
     {
       step: 6,
       title: "Prizes",
       description: "Winning teams will receive cash prizes, medals, long time mentoring, participation in national and international summer colleges and invitations to present at the International Natural Sciences Conference (INSC).",
-      icon: "🏆"
+      icon: ""
     }
   ];
 
@@ -154,32 +154,64 @@ const About = () => {
             Competition Methodology
           </h3>
           
-          {/* Mobile: 2 rows with 3 cards each, Desktop: single row */}
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-6 mb-8">
-            {methodology.map((step, index) => (
+          {/* First Row - 3 cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
+            {methodology.slice(0, 3).map((step, index) => (
               <div key={index} className="relative">
                 <Card 
-                  className="p-3 sm:p-6 text-center cursor-pointer transition-all duration-200 hover:shadow-lg transform hover:scale-105 bg-gradient-to-br from-purple-50 to-indigo-50 border-purple-200 h-full"
+                  className="p-4 sm:p-6 text-center cursor-pointer transition-all duration-200 hover:shadow-lg transform hover:scale-105 bg-gradient-to-br from-purple-50 to-indigo-50 border-purple-200 h-full"
                   onClick={() => setSelectedStep(step)}
                 >
-                  <div className="text-2xl sm:text-4xl mb-2 sm:mb-4">{step.icon}</div>
-                  <div className="bg-purple-600 text-white rounded-full w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm font-bold mx-auto mb-2 sm:mb-3">
-                    {step.step}
-                  </div>
-                  <h4 className="font-semibold text-purple-900 text-xs sm:text-base mb-1 sm:mb-2 leading-tight">
+                  <h4 className="font-semibold text-purple-900 text-sm sm:text-base mb-2 sm:mb-3 leading-tight">
                     {step.title}
                   </h4>
                   <p className="text-purple-700 text-xs sm:text-sm leading-relaxed hidden sm:block">
                     {step.description.substring(0, 80)}...
                   </p>
-                  <button className="text-purple-600 text-xs font-medium mt-1 sm:hidden">
+                  <button className="text-purple-600 text-xs font-medium mt-2 sm:hidden">
                     Tap for details
                   </button>
                 </Card>
                 
-                {/* Connection line for desktop */}
-                {index < methodology.length - 1 && (
-                  <div className="hidden sm:block absolute top-1/2 -right-3 w-6 h-0.5 bg-purple-300 transform -translate-y-1/2"></div>
+                {/* Arrow to next card (horizontal) */}
+                {index < 2 && (
+                  <div className="hidden sm:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-purple-400 text-xl">
+                    →
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Downward Arrow between rows */}
+          <div className="text-center mb-8">
+            <div className="text-purple-400 text-2xl">↓</div>
+          </div>
+
+          {/* Second Row - 3 cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {methodology.slice(3, 6).map((step, index) => (
+              <div key={index + 3} className="relative">
+                <Card 
+                  className="p-4 sm:p-6 text-center cursor-pointer transition-all duration-200 hover:shadow-lg transform hover:scale-105 bg-gradient-to-br from-purple-50 to-indigo-50 border-purple-200 h-full"
+                  onClick={() => setSelectedStep(step)}
+                >
+                  <h4 className="font-semibold text-purple-900 text-sm sm:text-base mb-2 sm:mb-3 leading-tight">
+                    {step.title}
+                  </h4>
+                  <p className="text-purple-700 text-xs sm:text-sm leading-relaxed hidden sm:block">
+                    {step.description.substring(0, 80)}...
+                  </p>
+                  <button className="text-purple-600 text-xs font-medium mt-2 sm:hidden">
+                    Tap for details
+                  </button>
+                </Card>
+                
+                {/* Arrow to next card (horizontal) */}
+                {index < 2 && (
+                  <div className="hidden sm:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-purple-400 text-xl">
+                    →
+                  </div>
                 )}
               </div>
             ))}
@@ -191,10 +223,7 @@ const About = () => {
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={() => setSelectedStep(null)}>
             <div className="bg-white rounded-lg p-6 max-w-md w-full" onClick={(e) => e.stopPropagation()}>
               <div className="text-center mb-4">
-                <div className="text-4xl mb-3">{selectedStep.icon}</div>
-                <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mx-auto mb-3">
-                  {selectedStep.step}
-                </div>
+                {/* Removed redundant icon display */}
                 <h4 className="font-bold text-purple-900 text-lg mb-2">
                   {selectedStep.title}
                 </h4>
@@ -219,8 +248,7 @@ const About = () => {
           </h3>
           <div className="max-w-4xl mx-auto">
             <Card variant="glass" className="p-8">
-              <h4 className="text-xl font-bold text-purple-900 mb-4 flex items-center gap-2">
-                <span className="text-2xl">🎓</span>
+              <h4 className="text-xl font-bold text-purple-900 mb-4">
                 Eligibility Criteria
               </h4>
               <ul className="space-y-3">

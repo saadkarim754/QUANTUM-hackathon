@@ -37,9 +37,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 sm:space-x-3 mb-2 sm:mb-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center shadow-md">
-                <span className="text-white font-bold text-sm sm:text-lg">⚛️</span>
-              </div>
+              <img 
+                src="/images/sponsors/competetion-logo.png" 
+                alt="Quantum Computing Hackathon Pakistan" 
+                className="h-8 sm:h-10 w-auto"
+              />
               <div>
                 <h3 className="text-base sm:text-xl font-bold text-white">
                   Quantum Hackathon Pakistan
@@ -96,7 +98,7 @@ const Footer = () => {
         {/* Important Notice - Compact on mobile */}
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-6 mb-4 sm:mb-8">
           <div className="flex items-start space-x-2 sm:space-x-3">
-            <div className="text-lg sm:text-2xl">🚀</div>
+            <div className="text-lg sm:text-2xl font-bold text-white">!</div>
             <div>
               <h4 className="text-sm sm:text-lg font-semibold text-white mb-1 sm:mb-2">Applications Open Now!</h4>
               <p className="text-purple-200 text-xs sm:text-sm leading-relaxed">
@@ -111,18 +113,16 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center pt-3 sm:pt-6 border-t border-white/20">
           <div className="flex items-center space-x-4 sm:space-x-6 mb-2 sm:mb-0">
             <button className="text-purple-200 hover:text-white transition-colors duration-200">
-              <span className="text-sm sm:text-xl">📧</span>
-              <span className="ml-1 sm:ml-2 text-xs sm:text-sm">Contact Us</span>
+              <span className="text-xs sm:text-sm">Contact Us</span>
             </button>
             <button className="text-purple-200 hover:text-white transition-colors duration-200">
-              <span className="text-sm sm:text-xl">🤝</span>
-              <span className="ml-1 sm:ml-2 text-xs sm:text-sm">Partner With Us</span>
+              <span className="text-xs sm:text-sm">Partner With Us</span>
             </button>
             <a 
               href="/admin-login"
               className="text-purple-200 hover:text-white transition-colors duration-200 text-xs bg-white/10 px-2 py-1 rounded border border-white/20 hover:bg-white/20"
             >
-              <span className="text-xs">🔐</span>
+              Admin
               <span className="ml-1">Admin</span>
             </a>
           </div>

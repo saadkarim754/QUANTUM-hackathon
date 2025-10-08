@@ -97,13 +97,6 @@ const Organizers = () => {
                      org.name.includes('NCP') ? 'NCP' : 
                      org.name.includes('NILOP') ? 'NILOP' : org.name}
                   </h4>
-                  
-                  {/* Role */}
-                  <div className="bg-purple-200 border border-purple-300 rounded px-2 py-1 sm:rounded-lg sm:px-3 sm:py-1">
-                    <span className="text-purple-800 text-xs sm:text-sm font-medium">
-                      {org.role}
-                    </span>
-                  </div>
                 </div>
               </Card>
             ))}
@@ -222,7 +215,7 @@ const Organizers = () => {
                 </p>
                 <div className="bg-indigo-200 border border-indigo-300 rounded-lg px-4 py-2 inline-block">
                   <span className="text-indigo-800 text-sm font-medium">
-                    📧 Project Manager & OQI Liaison
+                    Project Manager & OQI Liaison
                   </span>
                 </div>
               </div>
@@ -243,10 +236,10 @@ const Organizers = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
               <div className="bg-blue-200 border border-blue-300 rounded-lg px-3 sm:px-4 py-2">
-                <span className="text-blue-800 text-xs sm:text-sm font-medium">🔬 Research Excellence</span>
+                <span className="text-blue-800 text-xs sm:text-sm font-medium">Research Excellence</span>
               </div>
               <div className="bg-purple-200 border border-purple-300 rounded-lg px-3 sm:px-4 py-2">
-                <span className="text-purple-800 text-xs sm:text-sm font-medium">🎓 Student Development</span>
+                <span className="text-purple-800 text-xs sm:text-sm font-medium">Student Development</span>
               </div>
               <div className="bg-indigo-200 border border-indigo-300 rounded-lg px-3 sm:px-4 py-2">
                 <span className="text-indigo-800 text-xs sm:text-sm font-medium">🌐 Global Collaboration</span>

@@ -135,7 +135,7 @@ const Hero = () => {
         <div className="mb-3 sm:mb-2">
           <a href="/register">
             <button className="bg-gradient-to-r from-orange-500 via-purple-600 to-orange-500 bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700 text-white font-bold px-10 sm:px-12 py-5 sm:py-5 rounded-full text-lg sm:text-lg shadow-lg transform hover:scale-105 animate-pulse">
-              🚀 Apply Now
+              Apply Now
             </button>
           </a>
         </div>
@@ -157,7 +157,7 @@ const Hero = () => {
             onClick={() => scrollToSection('about')}
             className="bg-purple-100 hover:bg-purple-200 text-purple-700 hover:text-purple-800 font-medium px-8 sm:px-8 py-3 sm:py-3 rounded-full text-base sm:text-base border border-purple-200 hover:border-purple-300 transition-all duration-200 transform hover:scale-105"
           >
-            📋 Learn More
+            Learn More
           </button>
         </div>
       </div>

@@ -26,9 +26,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-sm">⚛️</span>
-            </div>
+            <img 
+              src="/images/sponsors/competetion-logo.png" 
+              alt="Quantum Computing Hackathon Pakistan" 
+              className="h-8 w-auto"
+            />
             <span className="text-purple-900 font-semibold text-lg hidden sm:block">
               Quantum Hackathon Pakistan
             </span>

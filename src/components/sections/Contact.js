@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 import Card from '@/components/ui/Card';
 
 const Contact = () => {
@@ -25,18 +27,17 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // For now, we'll just simulate form submission
-      // In a real implementation, you would integrate with EmailJS, Formspree, or your backend
-      
-      // Example with EmailJS (you'll need to install and configure EmailJS):
-      // await emailjs.send('your_service_id', 'your_template_id', formData, 'your_user_id');
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Store contact message in Firestore
+      await addDoc(collection(db, 'contactMessages'), {
+        ...formData,
+        submittedAt: serverTimestamp(),
+        status: 'unread'
+      });
       
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
+      console.error('Error sending message:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -47,7 +48,7 @@ const Contact = () => {
     <section id="contact" className="py-8 sm:py-12 bg-gradient-to-r from-indigo-900 via-purple-900 to-purple-800 relative overflow-hidden">
       {/* Simple background */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/5 text-2xl text-white animate-pulse">📧</div>
+        <div className="absolute top-1/4 left-1/5 text-2xl text-white animate-pulse">@</div>
         <div className="absolute top-1/3 right-1/4 text-xl text-white animate-bounce">�</div>
         <div className="absolute bottom-1/4 left-1/3 text-2xl text-white animate-pulse">🤝</div>
       </div>

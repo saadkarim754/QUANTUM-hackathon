@@ -48,12 +48,6 @@ const RegisterPage = () => {
     // Research Experience
     researchExperience: '',
     
-    // Additional fields specific to quantum hackathon
-    programmingExperience: '',
-    quantumKnowledge: '',
-    motivation: '',
-    teamPreference: '',
-    
     // Terms and conditions
     agreeToTerms: false
   });
@@ -152,10 +146,6 @@ const RegisterPage = () => {
           division: ''
         }],
         researchExperience: '',
-        programmingExperience: '',
-        quantumKnowledge: '',
-        motivation: '',
-        teamPreference: '',
         agreeToTerms: false
       });
       
@@ -173,8 +163,18 @@ const RegisterPage = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
+                {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+          <div className="flex justify-between items-center mb-4">
+            <a 
+              href="/"
+              className="bg-white/90 hover:bg-white text-purple-700 hover:text-purple-800 font-medium px-4 py-2 rounded-lg border border-purple-300 transition-all duration-200 transform hover:scale-105 shadow-sm"
+            >
+              ← Home
+            </a>
+            <div></div> {/* Spacer for centering */}
+          </div>
+          <h1 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-800 via-indigo-700 to-purple-900 bg-clip-text text-transparent mb-4">
             Quantum Hackathon Registration
           </h1>
           <p className="text-purple-700 max-w-2xl mx-auto">
@@ -363,8 +363,8 @@ const RegisterPage = () => {
 
             {/* Contact Information */}
             <div>
-              <h3 className="text-xl font-bold text-white mb-6 border-b border-white/20 pb-2">
-                📞 Contact Information
+              <h3 className="text-xl font-bold bg-gradient-to-r from-purple-700 to-indigo-600 bg-clip-text text-transparent mb-6 border-b border-purple-200 pb-2">
+                Contact Information
               </h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -432,7 +432,7 @@ const RegisterPage = () => {
             {/* Academic Information */}
             <div>
               <h3 className="text-xl font-bold text-white mb-6 border-b border-white/20 pb-2">
-                🎓 Academic Information
+                Academic Information
               </h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -592,12 +592,12 @@ const RegisterPage = () => {
             {/* Research & Experience */}
             <div>
               <h3 className="text-xl font-bold text-white mb-6 border-b border-white/20 pb-2">
-                🔬 Research & Experience
+                Research & Experience
               </h3>
               
-              <div className="space-y-6">
+                            <div className="space-y-6">
                 <div>
-                  <label className="block text-purple-200 text-sm font-medium mb-2">
+                  <label className="block text-gray-700 text-sm font-medium mb-2">
                     Research Experience (200-250 words)
                   </label>
                   <textarea 
@@ -605,75 +605,9 @@ const RegisterPage = () => {
                     value={formData.researchExperience}
                     onChange={handleChange}
                     rows="4"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 bg-white/90 border border-gray-300 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none shadow-sm"
                     placeholder="Describe your research experience, publications, projects, etc."
                   />
-                </div>
-                
-                <div>
-                  <label className="block text-purple-200 text-sm font-medium mb-2">
-                    Programming Experience <span className="text-red-400">*</span>
-                  </label>
-                  <textarea 
-                    name="programmingExperience"
-                    value={formData.programmingExperience}
-                    onChange={handleChange}
-                    required
-                    rows="3"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent resize-none"
-                    placeholder="List programming languages you know (Python, C++, JavaScript, etc.) and experience level"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-purple-200 text-sm font-medium mb-2">
-                    Quantum Computing Knowledge
-                  </label>
-                  <select 
-                    name="quantumKnowledge"
-                    value={formData.quantumKnowledge}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
-                  >
-                    <option value="" className="bg-gray-800 text-white">Select your level</option>
-                    <option value="Beginner" className="bg-gray-800 text-white">Beginner (No prior experience)</option>
-                    <option value="Basic" className="bg-gray-800 text-white">Basic (Some theoretical knowledge)</option>
-                    <option value="Intermediate" className="bg-gray-800 text-white">Intermediate (Some practical experience)</option>
-                    <option value="Advanced" className="bg-gray-800 text-white">Advanced (Significant experience)</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-purple-200 text-sm font-medium mb-2">
-                    Motivation for Participation <span className="text-red-400">*</span>
-                  </label>
-                  <textarea 
-                    name="motivation"
-                    value={formData.motivation}
-                    onChange={handleChange}
-                    required
-                    rows="4"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent resize-none"
-                    placeholder="Why do you want to participate in this quantum hackathon? What do you hope to achieve?"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-purple-200 text-sm font-medium mb-2">
-                    Team Preference
-                  </label>
-                  <select 
-                    name="teamPreference"
-                    value={formData.teamPreference}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
-                  >
-                    <option value="" className="bg-gray-800 text-white">No specific preference</option>
-                    <option value="Mixed disciplines" className="bg-gray-800 text-white">Mixed disciplines team</option>
-                    <option value="Physics focused" className="bg-gray-800 text-white">Physics-focused team</option>
-                    <option value="CS focused" className="bg-gray-800 text-white">Computer Science-focused team</option>
-                    <option value="Engineering focused" className="bg-gray-800 text-white">Engineering-focused team</option>
-                  </select>
                 </div>
               </div>
             </div>
@@ -711,7 +645,7 @@ const RegisterPage = () => {
                       Submitting Registration...
                     </span>
                   ) : (
-                    '🚀 Submit Registration'
+                    'Submit Registration'
                   )}
                 </Button>
               </div>

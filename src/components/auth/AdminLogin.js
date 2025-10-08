@@ -102,7 +102,7 @@ const AdminLogin = () => {
                 Logging in...
               </span>
             ) : (
-              '🚀 Login to Admin Dashboard'
+              'Login to Admin Dashboard'
             )}
           </button>
         </form>

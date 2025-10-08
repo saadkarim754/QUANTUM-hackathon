@@ -48,19 +48,19 @@ export const PRIZES = [
   {
     position: "1st Place",
     prize: "Cash Prize + Gold Medal",
-    icon: "🏆",
+    icon: "1st",
     color: "gold"
   },
   {
     position: "2nd Place", 
     prize: "Cash Prize + Silver Medal",
-    icon: "🥈",
+    icon: "2nd",
     color: "silver"
   },
   {
     position: "3rd Place",
     prize: "Cash Prize + Bronze Medal", 
-    icon: "🥉",
+    icon: "3rd",
     color: "bronze"
   }
 ];

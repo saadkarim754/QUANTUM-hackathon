@@ -50,6 +50,18 @@ const AdminDashboard = () => {
         updatedAt: new Date()
       });
       
+      // If approved, add to approved students collection
+      if (newStatus === 'approved') {
+        const registration = registrations.find(reg => reg.id === id);
+        if (registration) {
+          await addDoc(collection(db, 'approvedStudents'), {
+            ...registration,
+            approvedAt: new Date(),
+            originalRegistrationId: id
+          });
+        }
+      }
+      
       // Update local state
       setRegistrations(prev => 
         prev.map(reg => 
@@ -144,17 +156,17 @@ const AdminDashboard = () => {
               </p>
             </div>
             <div className="flex gap-4">
-              <a 
+                            <a 
                 href="/"
-                className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors text-sm"
+                className="px-4 py-2 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg transition-all duration-200 transform hover:scale-105 text-sm shadow-lg"
               >
-                🏠 Home
+                Home
               </a>
               <button 
                 onClick={logout}
-                className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors text-sm"
+                className="px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white rounded-lg transition-all duration-200 transform hover:scale-105 text-sm shadow-lg"
               >
-                🚪 Logout
+                Logout
               </button>
             </div>
           </div>
@@ -214,14 +226,14 @@ const AdminDashboard = () => {
             onClick={exportToCSV}
             className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
           >
-            📄 Export CSV
+            Export CSV
           </button>
           
           <button 
             onClick={fetchRegistrations}
             className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
           >
-            🔄 Refresh
+            Refresh
           </button>
         </div>
 
@@ -289,19 +301,19 @@ const AdminDashboard = () => {
                       onClick={() => updateRegistrationStatus(selectedRegistration.id, 'approved')}
                       className="px-3 py-1 bg-green-600 hover:bg-green-700 text-white rounded text-sm"
                     >
-                      ✅ Approve
+                      Approve
                     </button>
                     <button 
                       onClick={() => updateRegistrationStatus(selectedRegistration.id, 'rejected')}
                       className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded text-sm"
                     >
-                      ❌ Reject
+                      Reject
                     </button>
                     <button 
                       onClick={() => deleteRegistration(selectedRegistration.id)}
                       className="px-3 py-1 bg-gray-600 hover:bg-gray-700 text-white rounded text-sm"
                     >
-                      🗑️ Delete
+                      Delete
                     </button>
                   </div>
                 </div>
@@ -384,7 +396,6 @@ const AdminDashboard = () => {
               </div>
             ) : (
               <div className="text-center text-purple-300 py-12">
-                <div className="text-4xl mb-4">📋</div>
                 <p>Select a registration from the list to view details</p>
               </div>
             )}
