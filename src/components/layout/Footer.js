@@ -36,18 +36,12 @@ const Footer = () => {
           
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 sm:space-x-3 mb-2 sm:mb-4">
+            <div className="flex items-center mb-4">
               <img 
                 src="/images/sponsors/competetion-logo.png" 
                 alt="Quantum Computing Hackathon Pakistan" 
-                className="h-8 sm:h-10 w-auto"
+                className="h-12 sm:h-16 w-auto"
               />
-              <div>
-                <h3 className="text-base sm:text-xl font-bold text-white">
-                  Quantum Hackathon Pakistan
-                </h3>
-                <p className="text-purple-200 text-xs sm:text-sm">First-ever quantum computing hackathon in Pakistan</p>
-              </div>
             </div>
             <p className="text-purple-200 text-xs sm:text-sm leading-relaxed mb-2 sm:mb-4 hidden sm:block">
               Bringing together Pakistan's brightest minds to tackle real-world challenges using quantum 
