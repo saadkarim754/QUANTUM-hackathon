@@ -11,7 +11,7 @@ const About = () => {
     {
       step: 1,
       title: "Register Now",
-      description: "Registrations are now open! Submit your application by October 31st. We're looking for motivated students and young researchers passionate about quantum computing.",
+      description: "Registration is now open! Submit your application by October 31st. We're looking for motivated students and young researchers passionate about quantum computing.",
       icon: ""
     },
     {
@@ -47,7 +47,7 @@ const About = () => {
   ];
 
   const eligibility = [
-    "Open to students and young researchers from universities across Pakistan",
+    "Open to students and young researchers, up to the age of 35 years, from universities and research institutions across Pakistan.",
     "Disciplines: Physics, Computer Science, Engineering, Mathematics, AI and Machine Learning",
     "Strong motivation and background in STEM fields",
     "Commitment to complete preparatory coursework",
