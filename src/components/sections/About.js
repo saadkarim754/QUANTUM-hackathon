@@ -11,13 +11,13 @@ const About = () => {
     {
       step: 1,
       title: "Register Now",
-      description: "Applications are now open! Submit your application by October 31st. We're looking for motivated students and young researchers passionate about quantum computing.",
+      description: "Registrations are now open! Submit your application by October 31st. We're looking for motivated students and young researchers passionate about quantum computing.",
       icon: ""
     },
     {
       step: 2,
       title: "Coursework", 
-      description: "Selected applicants will complete OQI-led online quantum computing training throughout November. This intensive preparation covers quantum principles, programming, and practical applications.",
+      description: "Selected applicants will complete OQI-led online quantum computing training in November. This intensive preparation covers quantum principles, programming, and practical applications.",
       icon: ""
     },
     {
@@ -41,14 +41,14 @@ const About = () => {
     {
       step: 6,
       title: "Prizes",
-      description: "Winning teams will receive cash prizes, medals, long time mentoring, participation in national and international summer colleges and invitations to present at the International Natural Sciences Conference (INSC).",
+      description: "Winning teams will receive cash prizes, medals, long time mentoring, participation in national and international summer colleges and invitations to present at the International Nathiagalli Summer College (INSC).",
       icon: ""
     }
   ];
 
   const eligibility = [
     "Open to students and young researchers from universities across Pakistan",
-    "Diverse disciplines: Physics, Computer Science, Engineering, Mathematics, AI and Machine Learning",
+    "Disciplines: Physics, Computer Science, Engineering, Mathematics, AI and Machine Learning",
     "Strong motivation and background in STEM fields",
     "Commitment to complete preparatory coursework",
     "Ability to work collaboratively in diverse teams"

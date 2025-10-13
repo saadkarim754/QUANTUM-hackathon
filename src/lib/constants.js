@@ -67,7 +67,7 @@ export const PRIZES = [
 
 export const CAREER_INCENTIVES = {
   title: "Career Incentives",
-  description: "Beyond the monetary rewards, participants gain access to invaluable career development opportunities. Winners receive long-term mentoring from leading quantum researchers, participation in prestigious national and international summer colleges, and invitations to present their work at the International Natural Sciences Conference (INSC) and International Nathiagalli Summer College. These experiences provide direct pathways to advanced research opportunities, international collaboration networks, and recognition within Pakistan's growing quantum research community. The hackathon serves as a launching pad for participants to establish themselves as pioneers in the country's quantum technology landscape."
+  description: "Beyond the monetary rewards, participants gain access to invaluable career development opportunities. Winners receive long-term mentoring from leading quantum researchers, participation in prestigious national and international summer colleges, and invitations to present their work at the International Nathiagalli Summer College. These experiences provide direct pathways to advanced research opportunities, international collaboration networks, and recognition within Pakistan's growing quantum research community. The hackathon serves as a launching pad for participants to establish themselves as pioneers in the country's quantum technology landscape."
 };
 
 export const SDG_THEMES = [
@@ -157,16 +157,16 @@ export const ORGANIZERS = [
     description: "Leading engineering and applied sciences institute"
   },
   {
-    name: "National Center for Physics (NCP)",
-    role: "Venue Host", 
-    logo: "/images/sponsors/ncp.png",
-    description: "Premier physics research center hosting the event"
-  },
-  {
     name: "National Institute of Lasers and Optronics (NILOP)",
     role: "Co-Host",
     logo: "/images/sponsors/nilop.png", 
     description: "Advanced laser and optronics research institute"
+  },
+  {
+    name: "National Center for Physics (NCP)",
+    role: "Venue Host", 
+    logo: "/images/sponsors/ncp.png",
+    description: "Premier physics research center hosting the event"
   },
   {
     name: "Open Quantum Institute (OQI)",

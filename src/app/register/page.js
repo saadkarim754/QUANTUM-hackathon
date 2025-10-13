@@ -174,10 +174,10 @@ const RegisterPage = () => {
             </a>
             <div></div> {/* Spacer for centering */}
           </div>
-          <h1 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-800 via-indigo-700 to-purple-900 bg-clip-text text-transparent mb-4">
+          <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Quantum Hackathon Registration
           </h1>
-          <p className="text-purple-700 max-w-2xl mx-auto">
+          <p className="text-white max-w-2xl mx-auto">
             Join Pakistan's first quantum computing hackathon. Fill out the form below to apply. 
           </p>
         </div>

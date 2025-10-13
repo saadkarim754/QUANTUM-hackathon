@@ -108,9 +108,9 @@ const Organizers = () => {
           <h3 className="text-2xl sm:text-3xl font-bold text-purple-900 text-center mb-6 sm:mb-8">
             Partners
           </h3>
-          <div className="max-w-3xl mx-auto">
-            {/* First Row - 3 partners */}
-            <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6">
+          <div className="max-w-5xl mx-auto">
+            {/* All partners in one row */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
               <Card variant="glass" className="p-3 sm:p-4 bg-green-50 border-2 border-green-200 text-center hover:bg-green-100 transition-all duration-300">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
                   <img 
@@ -135,11 +135,8 @@ const Organizers = () => {
                 </div>
                 <h4 className="text-sm sm:text-base font-bold text-purple-900">GESDA</h4>
               </Card>
-            </div>
-            
-            {/* Second Row - 1 partner (centered) */}
-            <div className="flex justify-center">
-              <Card variant="glass" className="p-3 sm:p-4 bg-cyan-50 border-2 border-cyan-200 text-center hover:bg-cyan-100 transition-all duration-300 w-48">
+              
+              <Card variant="glass" className="p-3 sm:p-4 bg-cyan-50 border-2 border-cyan-200 text-center hover:bg-cyan-100 transition-all duration-300">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
                   <img 
                     src="/images/sponsors/oqi-logo-scaled.webp" 

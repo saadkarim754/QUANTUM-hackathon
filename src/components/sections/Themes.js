@@ -264,9 +264,7 @@ const Themes = () => {
               Innovation Meets Impact
             </h3>
             <p className="text-purple-200 mb-6 leading-relaxed">
-              Your quantum solution should demonstrate both <strong>technical innovation</strong> and 
-              <strong>real-world applicability</strong>. Focus on problems that matter to Pakistani 
-              communities while pushing the boundaries of quantum technology.
+              Your quantum solution should demonstrate both <strong>technical innovation</strong> and <strong>real-world applicability</strong>. Focus on problems that matter to Pakistani communities while pushing the boundaries of quantum technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="bg-purple-500/20 border border-purple-400/30 rounded-lg px-4 py-2">
