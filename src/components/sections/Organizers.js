@@ -155,19 +155,47 @@ const Organizers = () => {
           <h3 className="text-2xl sm:text-3xl font-bold text-purple-900 text-center mb-6 sm:mb-8">
             Sponsors
           </h3>
-          <Card variant="glass" className="max-w-2xl mx-auto p-6 sm:p-8 bg-gradient-to-r from-purple-100 to-indigo-100 border-2 border-purple-200 text-center">
-            <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤝</div>
-            <h4 className="text-lg sm:text-xl font-bold text-purple-900 mb-3 sm:mb-4">
-              Become a Sponsor
-            </h4>
-            <p className="text-gray-700 mb-4 sm:mb-6 text-sm leading-relaxed">
-              Join us in supporting Pakistan's quantum computing future. Sponsorship opportunities available 
-              for organizations wanting to support quantum education and research.
-            </p>
-            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold px-6 sm:px-8 py-3 rounded-full transition-all duration-200 transform hover:scale-105 text-sm">
-              Partner With Us
-            </button>
-          </Card>
+          <div className="max-w-4xl mx-auto">
+            {/* Current Sponsors */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <Card variant="glass" className="p-4 sm:p-6 bg-orange-50 border-2 border-orange-200 text-center hover:bg-orange-100 transition-all duration-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white rounded-lg shadow border p-2">
+                  <img 
+                    src="/images/sponsors/NYU-abudhabi.jpg" 
+                    alt="NYU Abu Dhabi" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <h4 className="text-sm sm:text-base font-bold text-orange-900">NYU Abu Dhabi</h4>
+              </Card>
+              
+              <Card variant="glass" className="p-4 sm:p-6 bg-teal-50 border-2 border-teal-200 text-center hover:bg-teal-100 transition-all duration-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white rounded-lg shadow border p-2">
+                  <img 
+                    src="/images/sponsors/CQTS.jpg" 
+                    alt="CQTS" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <h4 className="text-sm sm:text-base font-bold text-teal-900">CQTS</h4>
+              </Card>
+            </div>
+
+            {/* Become a Sponsor Section */}
+            <Card variant="glass" className="max-w-2xl mx-auto p-6 sm:p-8 bg-gradient-to-r from-purple-100 to-indigo-100 border-2 border-purple-200 text-center">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤝</div>
+              <h4 className="text-lg sm:text-xl font-bold text-purple-900 mb-3 sm:mb-4">
+                Become a Sponsor
+              </h4>
+              <p className="text-gray-700 mb-4 sm:mb-6 text-sm leading-relaxed">
+                Join us in supporting Pakistan's quantum computing future. Sponsorship opportunities available 
+                for organizations wanting to support quantum education and research.
+              </p>
+              <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold px-6 sm:px-8 py-3 rounded-full transition-all duration-200 transform hover:scale-105 text-sm">
+                Partner With Us
+              </button>
+            </Card>
+          </div>
         </div>
 
         {/* Project Leadership */}

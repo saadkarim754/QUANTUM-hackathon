@@ -3,7 +3,7 @@ export const HACKATHON_INFO = {
   title: "First Quantum Computing Hackathon in Pakistan",
   subtitle: "Solving Real-World Challenges with Quantum Technologies",
   dates: "February 6-8, 2026",
-  location: "National Center for Physics (NCP), Islamabad, Pakistan",
+  location: "National Centre for Physics (NCP), Islamabad, Pakistan",
   registrationDeadline: "October 31, 2025",
   
   description: `Pakistan's first dedicated quantum problem-solving competition, with applications closing October 31st! Participate in November coursework, then compete in February 2026 to tackle real-world challenges using quantum technologies.`,
@@ -163,10 +163,10 @@ export const ORGANIZERS = [
     description: "Advanced laser and optronics research institute"
   },
   {
-    name: "National Center for Physics (NCP)",
+    name: "National Centre for Physics (NCP)",
     role: "Venue Host", 
     logo: "/images/sponsors/ncp.png",
-    description: "Premier physics research center hosting the event"
+    description: "Premier physics research centre hosting the event"
   },
   {
     name: "Open Quantum Institute (OQI)",

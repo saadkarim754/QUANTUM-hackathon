@@ -15,7 +15,7 @@ const Footer = () => {
 
   const organizers = [
     'PIEAS - Pakistan Institute of Engineering & Applied Sciences',
-    'NCP - National Center for Physics',
+    'NCP - National Centre for Physics',
     'NILOP - National Institute of Lasers and Optronics',
     'OQI - Open Quantum Institute at CERN'
   ];
