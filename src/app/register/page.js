@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, query, where, getDocs } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
@@ -106,9 +106,25 @@ const RegisterPage = () => {
     setIsSubmitting(true);
     
     try {
-      // Add the registration to Firestore
+      // Check if email already exists in the database
+      const emailQuery = query(
+        collection(db, 'registrations'), 
+        where('email', '==', formData.email.toLowerCase().trim())
+      );
+      const existingDocs = await getDocs(emailQuery);
+      
+      if (!existingDocs.empty) {
+        // Email already exists - show error and don't submit
+        alert('This email address has already been used for registration. Each person can only register once. If you need to update your information, please contact us directly.');
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+        return;
+      }
+      
+      // Add the registration to Firestore (email doesn't exist)
       const docRef = await addDoc(collection(db, 'registrations'), {
         ...formData,
+        email: formData.email.toLowerCase().trim(), // Normalize email
         submittedAt: serverTimestamp(),
         status: 'pending'
       });
@@ -199,7 +215,7 @@ const RegisterPage = () => {
           {submitStatus === 'error' && (
             <div className="bg-red-500/20 border border-red-400/50 rounded-lg p-4 text-center mb-6">
               <p className="text-red-300 font-medium">
-                ❌ Error submitting registration. Please try again or contact us directly.
+                ❌ Registration could not be completed. This could be due to a duplicate email or technical error. Please contact us if you need assistance.
               </p>
             </div>
           )}
