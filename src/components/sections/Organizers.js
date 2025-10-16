@@ -155,6 +155,16 @@ const Organizers = () => {
           <h3 className="text-2xl sm:text-3xl font-bold text-purple-900 text-center mb-6 sm:mb-8">
             Sponsors
           </h3>
+          
+          {/* Main Sponsors Image */}
+          <div className="text-center mb-8">
+            <img 
+              src="/images/sponsors/sponsors.jpg" 
+              alt="Our Sponsors" 
+              className="mx-auto max-w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+
           <div className="max-w-4xl mx-auto">
             {/* Current Sponsors */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
