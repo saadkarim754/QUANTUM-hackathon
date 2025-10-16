@@ -103,6 +103,40 @@ const RegisterPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // First confirmation - ask user if they want to review or proceed
+    const userChoice = confirm("Do you want to review your information before submitting?\n\nClick 'OK' to review your details\nClick 'Cancel' to proceed directly with submission");
+    
+    if (userChoice) {
+      // User wants to review - show summary
+      const summary = `
+REGISTRATION SUMMARY - Please Review:
+
+Personal Information:
+• Name: ${formData.name}
+• Father's Name: ${formData.fatherName}
+• Email: ${formData.email}
+• Mobile: ${formData.mobileNo}
+• CNIC: ${formData.cnic}
+• Gender: ${formData.gender}
+• Nationality: ${formData.nationality}
+
+Academic Information:
+• Subject/Field: ${formData.subject}
+• Specialization: ${formData.specialization}
+
+Contact:
+• Address: ${formData.postalAddress}
+
+Do you want to proceed with submission?`;
+      
+      const proceedAfterReview = confirm(summary);
+      if (!proceedAfterReview) {
+        return; // User decided not to submit after review
+      }
+    }
+    
+    // User chose to proceed (either directly or after review)
     setIsSubmitting(true);
     
     try {
