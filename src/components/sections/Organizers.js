@@ -166,31 +166,6 @@ const Organizers = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            {/* Current Sponsors */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-              <Card variant="glass" className="p-4 sm:p-6 bg-orange-50 border-2 border-orange-200 text-center hover:bg-orange-100 transition-all duration-300">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white rounded-lg shadow border p-2">
-                  <img 
-                    src="/images/sponsors/NYU-abudhabi.jpg" 
-                    alt="NYU Abu Dhabi" 
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <h4 className="text-sm sm:text-base font-bold text-orange-900">NYU Abu Dhabi</h4>
-              </Card>
-              
-              <Card variant="glass" className="p-4 sm:p-6 bg-teal-50 border-2 border-teal-200 text-center hover:bg-teal-100 transition-all duration-300">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white rounded-lg shadow border p-2">
-                  <img 
-                    src="/images/sponsors/CQTS.jpg" 
-                    alt="CQTS" 
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <h4 className="text-sm sm:text-base font-bold text-teal-900">CQTS</h4>
-              </Card>
-            </div>
-
             {/* Become a Sponsor Section */}
             <Card variant="glass" className="max-w-2xl mx-auto p-6 sm:p-8 bg-gradient-to-r from-purple-100 to-indigo-100 border-2 border-purple-200 text-center">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤝</div>
