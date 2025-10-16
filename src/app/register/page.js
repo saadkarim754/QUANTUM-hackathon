@@ -116,6 +116,9 @@ const RegisterPage = () => {
       console.log('Document written with ID: ', docRef.id);
       setSubmitStatus('success');
       
+      // Show browser alert for successful submission
+      alert('Your application has been submitted successfully! We will review your application and get back to you soon.');
+      
       // Reset form
       setFormData({
         name: '',
