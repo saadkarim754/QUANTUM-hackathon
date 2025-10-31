@@ -4,9 +4,9 @@ export const HACKATHON_INFO = {
   subtitle: "Solving Real-World Challenges with Quantum Technologies",
   dates: "February 6-8, 2026",
   location: "National Centre for Physics (NCP), Islamabad, Pakistan",
-  registrationDeadline: "October 31, 2025",
+  registrationDeadline: "November 5, 2025",
   
-  description: `Pakistan's first dedicated quantum problem-solving competition, with applications closing October 31st! Participate in November coursework, then compete in February 2026 to tackle real-world challenges using quantum technologies.`,
+  description: `Pakistan's first dedicated quantum problem-solving competition, with applications closing November 5th! Participate in November coursework, then compete in February 2026 to tackle real-world challenges using quantum technologies.`,
   
   stats: {
     applicants: 70,
@@ -20,8 +20,8 @@ export const HACKATHON_INFO = {
 export const TIMELINE = [
   {
     phase: "Applications Open NOW!",
-    description: "Submit your application immediately! Registration closes October 31st. We're looking for passionate students and researchers from diverse STEM backgrounds.",
-    deadline: "October 31, 2025",
+    description: "Submit your application immediately! Registration closes November 5th. We're looking for passionate students and researchers from diverse STEM backgrounds.",
+    deadline: "November 5, 2025",
     status: "active"
   },
   {

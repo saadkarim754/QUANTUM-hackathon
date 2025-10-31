@@ -9,7 +9,7 @@ const Hero = () => {
   const [daysUntil, setDaysUntil] = useState(null);
 
   useEffect(() => {
-    setDaysUntil(calculateDaysUntil('2025-10-31'));
+    setDaysUntil(calculateDaysUntil('2025-11-05'));
   }, []);
 
   return (
@@ -147,7 +147,7 @@ const Hero = () => {
             <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-red-900 leading-tight mb-1">
               {daysUntil} days
             </p>
-            <p className="text-orange-700 text-sm font-medium">Apply by Oct 31</p>
+            <p className="text-orange-700 text-sm font-medium">Apply by Nov 5</p>
           </div>
         )}
         
