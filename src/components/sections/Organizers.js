@@ -158,26 +158,29 @@ const Organizers = () => {
           
           {/* Sponsor Logos Grid */}
           <div className="max-w-5xl mx-auto mb-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
-              {/* Emerging Technologies Lab Logo */}
-              <Card variant="glass" className="p-6 bg-blue-50 border-2 border-blue-200 text-center hover:bg-blue-100 transition-all duration-300 w-full max-w-md">
-                <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg shadow-lg border p-4">
-                  <img 
-                    src="/images/sponsors/Emerging Technologies Lab.png" 
-                    alt="Emerging Technologies Lab" 
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <h4 className="text-lg sm:text-xl font-bold text-blue-900">Emerging Technologies Lab</h4>
-              </Card>
-              
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Main Sponsors Image */}
-              <div className="w-full max-w-md">
+              <div className="w-full">
                 <img 
                   src="/images/sponsors/sponsors.jpg" 
                   alt="Our Sponsors" 
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
+              </div>
+              
+              {/* Right Column - Stacked Logos */}
+              <div className="flex flex-col gap-4">
+                {/* Emerging Technologies Lab Logo */}
+                <Card variant="glass" className="p-4 bg-blue-50 border-2 border-blue-200 text-center hover:bg-blue-100 transition-all duration-300">
+                  <div className="w-24 h-24 mx-auto mb-3 flex items-center justify-center bg-white rounded-lg shadow-lg border p-3">
+                    <img 
+                      src="/images/sponsors/Emerging Technologies Lab.png" 
+                      alt="Emerging Technologies Lab" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h4 className="text-base sm:text-lg font-bold text-blue-900">Emerging Technologies Lab</h4>
+                </Card>
               </div>
             </div>
           </div>
