@@ -133,23 +133,19 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -mt-2 sm:-mt-1">
         {/* Apply Now Button */}
         <div className="mb-3 sm:mb-2">
-          <a href="/register">
-            <button className="bg-gradient-to-r from-orange-500 via-purple-600 to-orange-500 bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700 text-white font-bold px-10 sm:px-12 py-5 sm:py-5 rounded-full text-lg sm:text-lg shadow-lg transform hover:scale-105 animate-pulse">
-              Apply Now
-            </button>
-          </a>
+          <button className="bg-gray-500 cursor-not-allowed text-white font-bold px-10 sm:px-12 py-5 sm:py-5 rounded-full text-lg sm:text-lg shadow-lg" disabled>
+            Evaluation in Progress
+          </button>
         </div>
         
-        {/* Days Left Counter */}
-        {daysUntil && daysUntil > 0 && (
-          <div className="inline-block bg-gradient-to-r from-red-100 to-orange-100 border-2 border-red-200 rounded-xl p-4 sm:p-6 mb-3 sm:mb-2">
-            <p className="text-red-700 mb-1 sm:mb-2 font-medium text-sm leading-relaxed">Registration closes in</p>
-            <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-red-900 leading-tight mb-1">
-              {daysUntil} days
-            </p>
-            <p className="text-orange-700 text-sm font-medium">Apply by Nov 5</p>
-          </div>
-        )}
+        {/* Registration Closed Notice */}
+        <div className="inline-block bg-gradient-to-r from-gray-100 to-gray-200 border-2 border-gray-300 rounded-xl p-4 sm:p-6 mb-3 sm:mb-2">
+          <p className="text-gray-700 mb-1 sm:mb-2 font-medium text-sm leading-relaxed">Registration Period Ended</p>
+          <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-1">
+            Evaluating Applications
+          </p>
+          <p className="text-gray-600 text-sm font-medium">Results will be announced soon</p>
+        </div>
         
         {/* Learn More Button */}
         <div>

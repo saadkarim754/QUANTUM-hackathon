@@ -91,12 +91,12 @@ const Footer = () => {
         {/* Important Notice - Compact on mobile */}
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-6 mb-4 sm:mb-8">
           <div className="flex items-start space-x-2 sm:space-x-3">
-            <div className="text-lg sm:text-2xl font-bold text-white">!</div>
+            <div className="text-lg sm:text-2xl font-bold text-white">📋</div>
             <div>
-              <h4 className="text-sm sm:text-lg font-semibold text-white mb-1 sm:mb-2">Applications Open Now!</h4>
+              <h4 className="text-sm sm:text-lg font-semibold text-white mb-1 sm:mb-2">Evaluation in Progress</h4>
               <p className="text-purple-200 text-xs sm:text-sm leading-relaxed">
-                Registration is currently open for Pakistan's first quantum computing hackathon. 
-                Apply by October 31st to be part of this historic event.
+                Registration has closed. We are currently evaluating applications for Pakistan's first quantum computing hackathon. 
+                Results will be announced soon.
               </p>
             </div>
           </div>

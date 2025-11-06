@@ -47,11 +47,9 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
-            <a href="/register">
-              <Button size="sm" variant="primary" className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800">
-                Register Now
-              </Button>
-            </a>
+            <Button size="sm" variant="primary" className="bg-gray-500 cursor-not-allowed" disabled>
+              Evaluation in Progress
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,11 +81,9 @@ const Navigation = () => {
                 </button>
               ))}
               <div className="px-3 py-2">
-                <a href="/register">
-                  <Button size="sm" variant="primary" className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800">
-                    Register Now
-                  </Button>
-                </a>
+                <Button size="sm" variant="primary" className="w-full bg-gray-500 cursor-not-allowed" disabled>
+                  Evaluation in Progress
+                </Button>
               </div>
             </div>
           </div>
