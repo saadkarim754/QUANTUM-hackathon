@@ -6,10 +6,12 @@ import { db } from '@/lib/firebase';
 import { useAuth } from '@/contexts/AuthContext';
 import ProtectedRoute from '@/components/auth/ProtectedRoute';
 import Card from '@/components/ui/Card';
+import { exportAllDataToPDF, exportApprovedDataToPDF } from '@/lib/pdfExport';
 
 const AdminDashboard = () => {
   const [registrations, setRegistrations] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [pdfExporting, setPdfExporting] = useState(false);
   const [selectedRegistration, setSelectedRegistration] = useState(null);
   const [filter, setFilter] = useState('all'); // all, pending, approved, rejected
   const { logout } = useAuth();
@@ -128,6 +130,30 @@ const AdminDashboard = () => {
     window.URL.revokeObjectURL(url);
   };
 
+  const handleExportAllPDF = async () => {
+    setPdfExporting(true);
+    try {
+      await exportAllDataToPDF();
+      alert('✓ All data exported to PDF successfully!');
+    } catch (error) {
+      alert('✗ Error exporting PDF: ' + error.message);
+    } finally {
+      setPdfExporting(false);
+    }
+  };
+
+  const handleExportApprovedPDF = async () => {
+    setPdfExporting(true);
+    try {
+      await exportApprovedDataToPDF();
+      alert('✓ Approved registrations exported to PDF successfully!');
+    } catch (error) {
+      alert('✗ Error exporting PDF: ' + error.message);
+    } finally {
+      setPdfExporting(false);
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-purple-800 flex items-center justify-center">
@@ -227,6 +253,30 @@ const AdminDashboard = () => {
             className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
           >
             Export CSV
+          </button>
+
+          <button 
+            onClick={handleExportAllPDF}
+            disabled={pdfExporting}
+            className={`px-4 py-2 rounded-lg transition-colors text-white font-medium ${
+              pdfExporting 
+                ? 'bg-gray-600 cursor-not-allowed' 
+                : 'bg-blue-600 hover:bg-blue-700'
+            }`}
+          >
+            {pdfExporting ? '⏳ Exporting...' : '📄 Export All to PDF'}
+          </button>
+
+          <button 
+            onClick={handleExportApprovedPDF}
+            disabled={pdfExporting}
+            className={`px-4 py-2 rounded-lg transition-colors text-white font-medium ${
+              pdfExporting 
+                ? 'bg-gray-600 cursor-not-allowed' 
+                : 'bg-indigo-600 hover:bg-indigo-700'
+            }`}
+          >
+            {pdfExporting ? '⏳ Exporting...' : '✓ Export Approved to PDF'}
           </button>
           
           <button 

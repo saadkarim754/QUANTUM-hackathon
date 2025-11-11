@@ -130,9 +130,7 @@ const About = () => {
             About the Hackathon
           </h2>
           <p className="text-sm sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
-            Pakistan's first-ever quantum computing hackathon, bringing together the brightest minds 
-            to tackle real-world challenges using quantum technologies and contribute to achieving 
-            the Sustainable Development Goals.
+            Pakistan's first-ever Quantum Computing Hackathon, supported by the Open Quantum Institute (OQI) at CERN and jointly organized by PIEAS, NILOP, and NCP, is bringing together the brightest minds to tackle real-world challenges using quantum technologies and contribute to achieving the UNO's Sustainable Development Goals (SDGs) in February 2026.
           </p>
         </div>
 

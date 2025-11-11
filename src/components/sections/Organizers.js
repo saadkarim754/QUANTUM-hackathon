@@ -109,8 +109,22 @@ const Organizers = () => {
             Partners
           </h3>
           <div className="max-w-5xl mx-auto">
-            {/* All partners in one row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+            {/* First Row - OQI Centered and Prominent */}
+            <div className="flex justify-center mb-6">
+              <Card variant="glass" className="p-6 sm:p-8 bg-cyan-50 border-2 border-cyan-200 text-center hover:bg-cyan-100 transition-all duration-300 max-w-xs">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-white rounded-lg shadow border p-3">
+                  <img 
+                    src="/images/sponsors/OQI.jpg" 
+                    alt="Open Quantum Institute" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <h4 className="text-base sm:text-lg font-bold text-cyan-900">Open Quantum Institute</h4>
+              </Card>
+            </div>
+            
+            {/* Second Row - LUMS, GESDA, NCQC */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
               <Card variant="glass" className="p-3 sm:p-4 bg-green-50 border-2 border-green-200 text-center hover:bg-green-100 transition-all duration-300">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
                   <img 
@@ -122,13 +136,6 @@ const Organizers = () => {
                 <h4 className="text-sm sm:text-base font-bold text-green-900">LUMS</h4>
               </Card>
               
-              <Card variant="glass" className="p-3 sm:p-4 bg-indigo-50 border-2 border-indigo-200 text-center hover:bg-indigo-100 transition-all duration-300">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
-                  <span className="text-indigo-600 font-bold text-sm">NCQC</span>
-                </div>
-                <h4 className="text-sm sm:text-base font-bold text-indigo-900">NCQC</h4>
-              </Card>
-              
               <Card variant="glass" className="p-3 sm:p-4 bg-purple-50 border-2 border-purple-200 text-center hover:bg-purple-100 transition-all duration-300">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
                   <span className="text-purple-600 font-bold text-sm">GESDA</span>
@@ -136,15 +143,11 @@ const Organizers = () => {
                 <h4 className="text-sm sm:text-base font-bold text-purple-900">GESDA</h4>
               </Card>
               
-              <Card variant="glass" className="p-3 sm:p-4 bg-cyan-50 border-2 border-cyan-200 text-center hover:bg-cyan-100 transition-all duration-300">
+              <Card variant="glass" className="p-3 sm:p-4 bg-indigo-50 border-2 border-indigo-200 text-center hover:bg-indigo-100 transition-all duration-300">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 flex items-center justify-center bg-white rounded-lg shadow border p-2">
-                  <img 
-                    src="/images/sponsors/oqi-logo-scaled.webp" 
-                    alt="OQI" 
-                    className="w-full h-full object-contain"
-                  />
+                  <span className="text-indigo-600 font-bold text-sm">NCQC</span>
                 </div>
-                <h4 className="text-sm sm:text-base font-bold text-cyan-900">OQI</h4>
+                <h4 className="text-sm sm:text-base font-bold text-indigo-900">NCQC</h4>
               </Card>
             </div>
           </div>

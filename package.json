@@ -11,6 +11,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "firebase": "^12.3.0",
+    "jspdf": "^3.0.3",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18"

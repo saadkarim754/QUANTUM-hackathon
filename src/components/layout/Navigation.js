@@ -32,7 +32,7 @@ const Navigation = () => {
               className="h-12 w-auto"
             />
             <span className="text-purple-900 font-semibold text-lg hidden sm:block">
-              Quantum Hackathon Pakistan
+              Quantum Computing Hackathon Pakistan
             </span>
           </div>
 
