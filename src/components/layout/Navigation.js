@@ -47,9 +47,11 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
-            <Button size="sm" variant="primary" className="bg-gray-500 cursor-not-allowed" disabled>
-              Evaluation in Progress
-            </Button>
+            <a href="/participants">
+              <Button size="sm" variant="primary" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+                View Participants
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -81,9 +83,11 @@ const Navigation = () => {
                 </button>
               ))}
               <div className="px-3 py-2">
-                <Button size="sm" variant="primary" className="w-full bg-gray-500 cursor-not-allowed" disabled>
-                  Evaluation in Progress
-                </Button>
+                <a href="/participants" className="block">
+                  <Button size="sm" variant="primary" className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+                    View Participants
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

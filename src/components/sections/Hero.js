@@ -131,20 +131,26 @@ const Hero = () => {
 
       {/* Apply Now Button and Days Counter - Outside the title card */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -mt-2 sm:-mt-1">
-        {/* Apply Now Button */}
+        {/* View Participants Button */}
         <div className="mb-3 sm:mb-2">
-          <button className="bg-gray-500 cursor-not-allowed text-white font-bold px-10 sm:px-12 py-5 sm:py-5 rounded-full text-lg sm:text-lg shadow-lg" disabled>
-            Evaluation in Progress
-          </button>
+          <a href="/participants">
+            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold px-10 sm:px-12 py-5 sm:py-5 rounded-full text-lg sm:text-lg shadow-lg transition-all duration-200 transform hover:scale-105">
+              View Selected Participants
+            </button>
+          </a>
         </div>
         
-        {/* Registration Closed Notice */}
-        <div className="inline-block bg-gradient-to-r from-gray-100 to-gray-200 border-2 border-gray-300 rounded-xl p-4 sm:p-6 mb-3 sm:mb-2">
-          <p className="text-gray-700 mb-1 sm:mb-2 font-medium text-sm leading-relaxed">Registration Period Ended</p>
-          <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-1">
-            Evaluating Applications
+        {/* Timeline Notice */}
+        <div className="inline-block bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 rounded-xl p-4 sm:p-6 mb-3 sm:mb-2">
+          <p className="text-green-800 mb-2 font-medium text-sm leading-relaxed">📚 Online course conducted by OQI will start on November 24th</p>
+          <p className="text-lg sm:text-xl lg:text-2xl font-bold text-green-900 leading-tight mb-2">
+            Participant Selection Timeline
           </p>
-          <p className="text-gray-600 text-sm font-medium">Results will be announced soon</p>
+          <div className="text-green-700 text-xs sm:text-sm font-medium space-y-1">
+            <p>✓ Final selection will be done till December 31st</p>
+            <p>✓ Teams will be made till January 05</p>
+            <p>✓ Mentors will be assigned</p>
+          </div>
         </div>
         
         {/* Learn More Button */}
