@@ -116,10 +116,10 @@ const ParticipantsPage = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Selected Participants
+            List of Selected Candidates
           </h1>
           <p className="text-lg text-purple-200 mb-6">
-            Congratulations to all participants selected for the Quantum Computing Hackathon!
+            Congratulations to all candidates selected for the Quantum Computing Hackathon!
           </p>
           
           {/* Important Dates Info Box */}
