@@ -49,7 +49,7 @@ const Navigation = () => {
             ))}
             <a href="/participants">
               <Button size="sm" variant="primary" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
-                View Participants
+                List of Selected Candidates
               </Button>
             </a>
           </div>
@@ -85,7 +85,7 @@ const Navigation = () => {
               <div className="px-3 py-2">
                 <a href="/participants" className="block">
                   <Button size="sm" variant="primary" className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
-                    View Participants
+                    List of Selected Candidates
                   </Button>
                 </a>
               </div>

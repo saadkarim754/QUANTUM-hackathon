@@ -135,21 +135,18 @@ const Hero = () => {
         <div className="mb-3 sm:mb-2">
           <a href="/participants">
             <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold px-10 sm:px-12 py-5 sm:py-5 rounded-full text-lg sm:text-lg shadow-lg transition-all duration-200 transform hover:scale-105">
-              View Selected Participants
+              List of Selected Candidates
             </button>
           </a>
         </div>
         
         {/* Timeline Notice */}
         <div className="inline-block bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 rounded-xl p-4 sm:p-6 mb-3 sm:mb-2">
-          <p className="text-green-800 mb-2 font-medium text-sm leading-relaxed">📚 Online course conducted by OQI will start on November 24th</p>
-          <p className="text-lg sm:text-xl lg:text-2xl font-bold text-green-900 leading-tight mb-2">
-            Participant Selection Timeline
-          </p>
+          <p className="text-green-800 mb-2 font-medium text-sm leading-relaxed">📚 Online course conducted by OQI will begin on November 24th, 2025</p>
           <div className="text-green-700 text-xs sm:text-sm font-medium space-y-1">
-            <p>✓ Final selection will be done till December 31st</p>
-            <p>✓ Teams will be made till January 05</p>
-            <p>✓ Mentors will be assigned</p>
+            <p>✓ Final selection will be completed by December 31st, based on participants' performance in the OQI online course</p>
+            <p>✓ Teams will be finalized by January 5th, 2026</p>
+            <p>✓ Mentors will be assigned afterward</p>
           </div>
         </div>
         
