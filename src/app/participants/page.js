@@ -93,7 +93,18 @@ const ParticipantsPage = () => {
     { srNo: 82, name: "Rabbia Mahum", institute: "UET Taxila", city: "Wahcant" },
     { srNo: 83, name: "Hafsa Naz", institute: "University Of Agriculture, Faisalabad.", city: "Faisalabad" },
     { srNo: 84, name: "Muhammad Shaif Imran", institute: "FAST, NUCES, Islamabad", city: "Islamabad" },
-    { srNo: 85, name: "Ayesha Arshad", institute: "Institute of Space Technology, Islamabad", city: "Rawalpindi" }
+    { srNo: 85, name: "Ayesha Arshad", institute: "Institute of Space Technology, Islamabad", city: "Rawalpindi" },
+    { srNo: 86, name: "Kamran Ahmad", institute: "University of The Punjab, Lahore", city: "" },
+    { srNo: 87, name: "Mubashir Developer", institute: "University of Mianwali", city: "" },
+    { srNo: 88, name: "Muhammad Ayyaz", institute: "Pakistan Institute of Engineering and Applied Sciences", city: "" },
+    { srNo: 89, name: "Muhammad Mudassar", institute: "Government College University Lahore", city: "" },
+    { srNo: 90, name: "Muhammad Shaif Imran", institute: "FAST, NUCES", city: "" },
+    { srNo: 91, name: "Naeem Ahmad", institute: "PIEAS", city: "" },
+    { srNo: 92, name: "Rafia Batool", institute: "Quaid-e-Azam University Islamabad", city: "" },
+    { srNo: 93, name: "Wajiha Masood", institute: "PIEAS", city: "" },
+    { srNo: 94, name: "Wajya Ajmal", institute: "Quaid-i-Azam University", city: "" },
+    { srNo: 95, name: "Zahid Bilal", institute: "Khushkhal Khan Khattak University Karak", city: "" },
+    { srNo: 96, name: "Zoha Imran", institute: "Shaheed Benazir Bhutto Women University", city: "" }
   ];
 
   // Filter participants based on search term
