@@ -135,7 +135,7 @@ const Hero = () => {
         <div className="mb-3 sm:mb-2">
           <a href="/participants">
             <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold px-10 sm:px-12 py-5 sm:py-5 rounded-full text-lg sm:text-lg shadow-lg transition-all duration-200 transform hover:scale-105">
-              List of Selected Candidates
+              Final Teams
             </button>
           </a>
         </div>
