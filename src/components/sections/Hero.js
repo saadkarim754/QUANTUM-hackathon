@@ -3,13 +3,38 @@
 import { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import { HACKATHON_INFO } from '@/lib/constants';
-import { calculateDaysUntil, scrollToSection } from '@/lib/utils';
+import { scrollToSection } from '@/lib/utils';
 
 const Hero = () => {
-  const [daysUntil, setDaysUntil] = useState(null);
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setDaysUntil(calculateDaysUntil('2025-11-05'));
+    setIsClient(true);
+    const targetDate = new Date('2026-02-06T00:00:00');
+
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const difference = targetDate - now;
+      
+      if (difference > 0) {
+        return {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        };
+      }
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    };
+
+    setTimeLeft(calculateTimeLeft());
+
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -140,13 +165,25 @@ const Hero = () => {
           </a>
         </div>
         
-        {/* Timeline Notice */}
-        <div className="inline-block bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 rounded-xl p-4 sm:p-6 mb-3 sm:mb-2">
-          <p className="text-green-800 mb-2 font-medium text-sm leading-relaxed">📚 Online course conducted by OQI will begin on November 24th, 2025</p>
-          <div className="text-green-700 text-xs sm:text-sm font-medium space-y-1">
-            <p>✓ Final selection will be completed by December 31st, based on participants' performance in the OQI online course</p>
-            <p>✓ Teams will be finalized by January 5th, 2026</p>
-            <p>✓ Mentors will be assigned afterward</p>
+        {/* Event Countdown */}
+        <div className="mb-8">
+          <p className="text-purple-600 font-semibold mb-3 tracking-wide uppercase text-sm animate-pulse">Event Starts In</p>
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
+            {[
+              { label: 'Days', value: timeLeft.days },
+              { label: 'Hours', value: timeLeft.hours },
+              { label: 'Minutes', value: timeLeft.minutes },
+              { label: 'Seconds', value: timeLeft.seconds }
+            ].map((item, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/80 backdrop-blur-md border border-purple-200 rounded-2xl flex items-center justify-center shadow-md transform transition-transform hover:scale-105">
+                  <span className="text-2xl sm:text-3xl font-bold text-purple-900">
+                    {isClient ? item.value.toString().padStart(2, '0') : '00'}
+                  </span>
+                </div>
+                <span className="text-xs text-purple-800 font-semibold mt-2 uppercase tracking-wide">{item.label}</span>
+              </div>
+            ))}
           </div>
         </div>
         
