@@ -77,7 +77,7 @@ const ParticipantsPage = () => {
     {
       id: "F",
       name: "Team F",
-      mentors: "Dr. Sabih Ud Din Khan, Dr. Sayed Abbas Zulqarnain Naqvi",
+      mentors: "Dr. Sabih Ud Din Khan, Dr. Abdur Razzaq",
       members: [
         "Mahum Noor",
         "Fatma Zafar",
