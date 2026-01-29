@@ -134,8 +134,13 @@ const Hero = () => {
               <h1 className="text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-4 text-white leading-tight drop-shadow-2xl">
                 {HACKATHON_INFO.title}
               </h1>
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 leading-relaxed drop-shadow-lg mb-4 sm:mb-6">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 leading-relaxed drop-shadow-lg mb-2 sm:mb-3">
                 {HACKATHON_INFO.subtitle}
+              </p>
+              
+              {/* Tagline */}
+              <p className="text-xs sm:text-sm text-yellow-300 font-semibold tracking-widest mb-4 sm:mb-6">
+                STUDENTS • RESEARCHERS • INNOVATORS
               </p>
               
               {/* Event Details inside card */}
@@ -154,7 +159,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Apply Now Button and Days Counter - Outside the title card */}
+      {/* Final Teams Button and Event Countdown - Outside the title card */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -mt-2 sm:-mt-1">
         {/* View Participants Button */}
         <div className="mb-3 sm:mb-2">
@@ -163,6 +168,22 @@ const Hero = () => {
               Final Teams
             </button>
           </a>
+        </div>
+        
+        {/* Stats Banner */}
+        <div className="mb-4 flex flex-wrap justify-center gap-4 sm:gap-8">
+          <div className="text-center">
+            <span className="text-2xl sm:text-3xl font-bold text-purple-700">950+</span>
+            <p className="text-xs text-purple-600 uppercase tracking-wide">Applications</p>
+          </div>
+          <div className="text-center">
+            <span className="text-2xl sm:text-3xl font-bold text-purple-700">42</span>
+            <p className="text-xs text-purple-600 uppercase tracking-wide">Finalists</p>
+          </div>
+          <div className="text-center">
+            <span className="text-2xl sm:text-3xl font-bold text-purple-700">7</span>
+            <p className="text-xs text-purple-600 uppercase tracking-wide">Teams</p>
+          </div>
         </div>
         
         {/* Event Countdown */}
@@ -185,6 +206,16 @@ const Hero = () => {
               </div>
             ))}
           </div>
+        </div>
+        
+        {/* Tagline & Hashtag */}
+        <div className="mb-6">
+          <p className="text-purple-700 font-medium text-sm sm:text-base mb-2">
+            Three Days of Ideas, Research and Quantum Breakthroughs
+          </p>
+          <p className="text-indigo-600 font-bold text-base sm:text-lg">
+            #QuantumHackathonPakistan
+          </p>
         </div>
         
         {/* Learn More Button */}

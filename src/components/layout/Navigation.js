@@ -25,7 +25,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <a href="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity">
             <img 
               src="/images/sponsors/competetion-logo.png" 
               alt="Quantum Computing Hackathon Pakistan" 
@@ -34,7 +34,7 @@ const Navigation = () => {
             <span className="text-purple-900 font-semibold text-lg hidden sm:block">
               Quantum Computing Hackathon Pakistan
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

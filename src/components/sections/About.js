@@ -10,20 +10,20 @@ const About = () => {
   const methodology = [
     {
       step: 1,
-      title: "Register Now",
-      description: "Registration is now open! Submit your application by October 31st. We're looking for motivated students and young researchers passionate about quantum computing.",
+      title: "Applications Closed",
+      description: "Registration has closed. Thank you to all 950+ applicants nationwide who expressed interest in Pakistan's first quantum computing hackathon.",
       icon: ""
     },
     {
       step: 2,
-      title: "Coursework", 
-      description: "Selected applicants will complete OQI-led online quantum computing training in November. This intensive preparation covers quantum principles, programming, and practical applications.",
+      title: "Coursework Completed", 
+      description: "Selected applicants completed OQI-led online quantum computing training in November. The intensive preparation covered quantum principles, programming, and practical applications.",
       icon: ""
     },
     {
       step: 3,
-      title: "Final Selection",
-      description: "49 participants will be chosen based on their performance in course work and dedication. Teams will be balanced by age and research gap to ensure diverse collaboration.",
+      title: "Teams Formed",
+      description: "42 finalists have been selected from 950+ nationwide applications based on their performance in coursework and dedication. Teams have been balanced by age and research background to ensure diverse collaboration.",
       icon: ""
     },
     {
@@ -138,10 +138,13 @@ const About = () => {
         <div className="mb-16">
           <Card variant="gradient" className="max-w-5xl mx-auto text-center p-8">
             <h3 className="text-2xl font-bold text-purple-900 mb-4">Our Mission</h3>
-            <p className="text-lg text-purple-700 leading-relaxed">
+            <p className="text-lg text-purple-700 leading-relaxed mb-4">
               This hackathon will be Pakistan's <strong>first dedicated quantum problem-solving competition</strong>, 
               directly connecting innovation to the <strong>UN Sustainable Development Goals (SDGs)</strong> while 
               building national capacity in quantum computing, communication, and security.
+            </p>
+            <p className="text-xl font-semibold text-indigo-700 italic">
+              "Shaping Pakistan's Quantum Ecosystem"
             </p>
           </Card>
         </div>
@@ -265,15 +268,18 @@ const About = () => {
         <div className="text-center">
           <Card variant="gradient" className="max-w-2xl mx-auto p-8">
             <h3 className="text-2xl font-bold text-purple-900 mb-4">
-              Ready to Shape the Future?
+              The Event is Almost Here!
             </h3>
-            <p className="text-purple-700 mb-6">
-              Join Pakistan's quantum revolution and contribute to solving real-world challenges 
-              through cutting-edge quantum technologies.
+            <p className="text-purple-700 mb-4">
+              42 finalists from 950+ applications are ready to compete and shape Pakistan's quantum future. 
+              The hackathon begins February 6th at NCP, Islamabad.
             </p>
-            <a href="/register">
+            <p className="text-indigo-600 font-semibold mb-6">
+              Three Days of Ideas, Research and Quantum Breakthroughs
+            </p>
+            <a href="/participants">
               <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold px-8 py-3 rounded-full transition-all duration-200 transform hover:scale-105">
-                Apply Now
+                View Final Teams
               </button>
             </a>
           </Card>

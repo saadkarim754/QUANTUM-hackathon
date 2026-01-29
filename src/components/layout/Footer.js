@@ -91,12 +91,12 @@ const Footer = () => {
         {/* Important Notice - Compact on mobile */}
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-6 mb-4 sm:mb-8">
           <div className="flex items-start space-x-2 sm:space-x-3">
-            <div className="text-lg sm:text-2xl font-bold text-white">📋</div>
+            <div className="text-lg sm:text-2xl font-bold text-white">�</div>
             <div>
-              <h4 className="text-sm sm:text-lg font-semibold text-white mb-1 sm:mb-2">Evaluation in Progress</h4>
+              <h4 className="text-sm sm:text-lg font-semibold text-white mb-1 sm:mb-2">Event Starting Soon!</h4>
               <p className="text-purple-200 text-xs sm:text-sm leading-relaxed">
-                Registration has closed. We are currently evaluating applications for Pakistan's first quantum computing hackathon. 
-                Results will be announced soon.
+                42 finalists from 950+ nationwide applications in 7 teams are ready to compete at Pakistan's first quantum computing hackathon. 
+                The event begins February 6th, 2026 at NCP, Islamabad.
               </p>
             </div>
           </div>
@@ -130,10 +130,16 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Final Message - Hidden on mobile */}
-        <div className="text-center mt-3 sm:mt-8 pt-3 sm:pt-6 border-t border-white/20 hidden sm:block">
-          <p className="text-purple-200 text-sm italic">
-            "Building Pakistan's quantum future, one innovation at a time."
+        {/* Final Message */}
+        <div className="text-center mt-3 sm:mt-8 pt-3 sm:pt-6 border-t border-white/20">
+          <p className="text-purple-200 text-sm sm:text-base font-medium mb-2">
+            Follow the Journey | Witness the Quantum Revolution
+          </p>
+          <p className="text-yellow-400 font-bold text-base sm:text-lg">
+            #QuantumHackathonPakistan
+          </p>
+          <p className="text-purple-300 text-xs sm:text-sm mt-2 italic hidden sm:block">
+            Shaping Pakistan's Quantum Ecosystem
           </p>
         </div>
 

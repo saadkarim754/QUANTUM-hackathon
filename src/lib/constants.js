@@ -4,43 +4,52 @@ export const HACKATHON_INFO = {
   subtitle: "Solving Real-World Challenges with Quantum Technologies",
   dates: "February 6-8, 2026",
   location: "National Centre for Physics (NCP), Islamabad, Pakistan",
-  registrationDeadline: "November 5, 2025",
+  registrationDeadline: "Closed",
   
-  description: `Pakistan's first dedicated quantum problem-solving competition, with applications closing November 5th! Participate in November coursework, then compete in February 2026 to tackle real-world challenges using quantum technologies.`,
+  description: `Pakistan's first dedicated quantum problem-solving competition is happening soon! 42 finalists in 7 teams will compete in February 2026 to tackle real-world challenges using quantum technologies.`,
   
   stats: {
-    applicants: 70,
-    finalParticipants: 49,
+    applicants: 950,
+    finalParticipants: 42,
     teams: 7,
-    teamSize: 7,
+    teamSize: 6,
     durationDays: 3
+  },
+  
+  taglines: {
+    participants: "STUDENTS • RESEARCHERS • INNOVATORS",
+    mission: "Shaping Pakistan's Quantum Ecosystem",
+    event: "Three Days of Ideas, Research and Quantum Breakthroughs",
+    sdg: "Aligning with UN Sustainable Development Goals (SDGs)",
+    cta: "Follow the Journey | Witness the Quantum Revolution",
+    hashtag: "#QuantumHackathonPakistan"
   }
 };
 
 export const TIMELINE = [
   {
-    phase: "Applications Open NOW!",
-    description: "Submit your application immediately! Registration closes November 5th. We're looking for passionate students and researchers from diverse STEM backgrounds.",
+    phase: "Applications Closed",
+    description: "Registration has closed. Thank you to all applicants who showed interest in Pakistan's first quantum computing hackathon.",
     deadline: "November 5, 2025",
-    status: "active"
+    status: "completed"
   },
   {
     phase: "November Intensive Training", 
-    description: "Selected participants complete OQI-led quantum computing coursework throughout November. Interactive sessions, assignments, and hands-on quantum programming.",
+    description: "Selected participants completed OQI-led quantum computing coursework throughout November. Interactive sessions, assignments, and hands-on quantum programming.",
     deadline: "November 30, 2025",
-    status: "upcoming"
+    status: "completed"
   },
   {
     phase: "Final Selection & Teams",
-    description: "49 participants chosen based on coursework performance and grouped into 7 diverse teams of 7 members each.",
+    description: "42 finalists have been selected from 950+ nationwide applications and grouped into 7 diverse teams.",
     deadline: "February 1, 2026", 
-    status: "upcoming"
+    status: "completed"
   },
   {
     phase: "Hackathon Event",
     description: "3-day intensive hackathon at NCP with mentorship, development, and presentations.",
     deadline: "February 6-8, 2026",
-    status: "upcoming"
+    status: "active"
   }
 ];
 

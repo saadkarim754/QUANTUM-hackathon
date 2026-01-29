@@ -130,7 +130,7 @@ const ParticipantsPage = () => {
           
           {/* Status Info Box */}
           <div className="max-w-3xl mx-auto bg-green-500/10 backdrop-blur-md border border-green-500/30 rounded-xl p-4 mb-8">
-            <h2 className="text-lg font-bold text-green-200 mb-2">✅ Teams Finalized</h2>
+            <h2 className="text-lg font-bold text-green-200 mb-2">Teams Finalized</h2>
             <p className="text-green-100">
               All teams have been formed and mentors assigned. Get ready for the hackathon on February 6th!
             </p>
