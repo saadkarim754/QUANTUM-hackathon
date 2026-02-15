@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Teams - Quantum Computing Hackathon Pakistan</title>
+  <meta name="description" content="Meet the 7 finalist teams competing in Pakistan's first quantum computing hackathon.">
+  <link rel="icon" href="images/sponsors/competetion-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Teams Page Specific Styles */
+    .teams-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #312e81 0%, #581c87 50%, #6b21a8 100%);
+      padding-top: 5rem;
+    }
+
+    .teams-header {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .teams-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .teams-header p {
+      font-size: 1.125rem;
+      color: #c4b5fd;
+      margin-bottom: 1.5rem;
+    }
+
+    .status-box {
+      max-width: 48rem;
+      margin: 0 auto 2rem;
+      background: rgba(34, 197, 94, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      border-radius: 0.75rem;
+      padding: 1rem;
+    }
+
+    .status-box h2 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #86efac;
+      margin-bottom: 0.5rem;
+    }
+
+    .status-box p {
+      color: #dcfce7;
+    }
+
+    .search-box {
+      max-width: 40rem;
+      margin: 0 auto 2.5rem;
+      padding: 0 1rem;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 0.75rem;
+      color: #fff;
+      font-size: 1.125rem;
+    }
+
+    .search-input::placeholder {
+      color: #c4b5fd;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: #a78bfa;
+      box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.4);
+    }
+
+    .teams-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      padding: 0 1rem 3rem;
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .team-card:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: scale(1.02);
+    }
+
+    .team-card-header {
+      background: rgba(147, 51, 234, 0.3);
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .team-card-header h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .member-count {
+      background: #9333ea;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 9999px;
+    }
+
+    .team-card-body {
+      padding: 1.5rem;
+    }
+
+    .mentors-section {
+      margin-bottom: 1rem;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #c4b5fd;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .mentors-text {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .members-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .members-list li {
+      color: #e9d5ff;
+      display: flex;
+      align-items: center;
+      padding: 0.25rem 0;
+    }
+
+    .member-dot {
+      width: 6px;
+      height: 6px;
+      background: #a78bfa;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #c4b5fd;
+      font-size: 1.125rem;
+    }
+
+    .back-button {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      margin-bottom: 3rem;
+    }
+
+    .back-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    .teams-footer {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .teams-header h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .teams-header h1 {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/sponsors/competetion-logo.png" alt="Quantum Hackathon Pakistan">
+        <span>Quantum Computing Hackathon Pakistan</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#themes">Competition Themes</a>
+        <a href="index.html#prizes">Prizes and Beyond</a>
+        <a href="index.html#organizers">Organizers</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="teams.html" class="nav-btn">Final Teams</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Teams Section -->
+  <div class="teams-page">
+    <div class="teams-header">
+      <h1>Final Teams</h1>
+      <p>Meet the 7 confirmed teams for the Quantum Computing Hackathon!</p>
+      
+      <!-- Status Info Box -->
+      <div class="status-box">
+        <h2>Teams Finalized</h2>
+        <p>All teams have been formed and mentors assigned. Get ready for the hackathon on February 6th!</p>
+      </div>
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="searchInput"
+        class="search-input" 
+        placeholder="Search teams, mentors, or members..."
+        oninput="filterTeams()"
+      >
+    </div>
+
+    <!-- Teams Grid -->
+    <div class="teams-grid" id="teamsGrid">
+      <!-- Team A -->
+      <div class="team-card" data-team="Team A" data-mentors="Dr. Muhammad Ilyas, Dr. Ammaria Javed" data-members="Muhammad Shaheer Saleh, Zoya Arooj, Sara Nargis, Aasia Bibi, Sobaan Qadeer, Muhammad Warsham Qaiser">
+        <div class="team-card-header">
+          <h3>Team A</h3>
+          <span class="member-count">6 Members</span>
+        </div>
+        <div class="team-card-body">
+          <div class="mentors-section">
+            <p class="section-label">Mentors</p>
+            <p class="mentors-text">Dr. Muhammad Ilyas, Dr. Ammaria Javed</p>
+          </div>
+          <div>
+            <p class="section-label">Team Members</p>
+            <ul class="members-list">
+              <li><span class="member-dot"></span>Muhammad Shaheer Saleh</li>
+              <li><span class="member-dot"></span>Zoya Arooj</li>
+              <li><span class="member-dot"></span>Sara Nargis</li>
+              <li><span class="member-dot"></span>Aasia Bibi</li>
+              <li><span class="member-dot"></span>Sobaan Qadeer</li>
+              <li><span class="member-dot"></span>Muhammad Warsham Qaiser</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team B -->
+      <div class="team-card" data-team="Team B" data-mentors="Dr. Bilal Tariq, Dr. Nauhaila" data-members="Subhan Ud Din, Syeda Samia Fatima, Syed Muhammad Ali Bukhari, Hafsa Naz, Ahmed Mubarak Faisal, Mehwish Roqaiya">
+        <div class="team-card-header">
+          <h3>Team B</h3>
+          <span class="member-count">6 Members</span>
+        </div>
+        <div class="team-card-body">
+          <div class="mentors-section">
+            <p class="section-label">Mentors</p>
+            <p class="mentors-text">Dr. Bilal Tariq, Dr. Nauhaila</p>
+          </div>
+          <div>
+            <p class="section-label">Team Members</p>
+            <ul class="members-list">
+              <li><span class="member-dot"></span>Subhan Ud Din</li>
+              <li><span class="member-dot"></span>Syeda Samia Fatima</li>
+              <li><span class="member-dot"></span>Syed Muhammad Ali Bukhari</li>
+              <li><span class="member-dot"></span>Hafsa Naz</li>
+              <li><span class="member-dot"></span>Ahmed Mubarak Faisal</li>
+              <li><span class="member-dot"></span>Mehwish Roqaiya</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team C -->
+      <div class="team-card" data-team="Team C" data-mentors="Dr. Muzammil, Dr. Muhammad Kashif" data-members="Falak Dinar, Wajiha Masood, Muhammad Haroon Umar, Sidra Azam, Muhammad Mudassar, Laiba Saifullah">
+        <div class="team-card-header">
+          <h3>Team C</h3>
+          <span class="member-count">6 Members</span>
+        </div>
+        <div class="team-card-body">
+          <div class="mentors-section">
+            <p class="section-label">Mentors</p>
+            <p class="mentors-text">Dr. Muzammil, Dr. Muhammad Kashif</p>
+          </div>
+          <div>
+            <p class="section-label">Team Members</p>
+            <ul class="members-list">
+              <li><span class="member-dot"></span>Falak Dinar</li>
+              <li><span class="member-dot"></span>Wajiha Masood</li>
+              <li><span class="member-dot"></span>Muhammad Haroon Umar</li>
+              <li><span class="member-dot"></span>Sidra Azam</li>
+              <li><span class="member-dot"></span>Muhammad Mudassar</li>
+              <li><span class="member-dot"></span>Laiba Saifullah</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team D -->
+      <div class="team-card" data-team="Team D" data-mentors="Dr. Kamran Rehan, Mr.Muhammad Waqas Haseeb" data-members="Muhammad Latif, Muskan Aman Khan, Tooba Bibi, Misbah Riaz, Muhammad Ayyaz, Naeem Ahmed">
+        <div class="team-card-header">
+          <h3>Team D</h3>
+          <span class="member-count">6 Members</span>
+        </div>
+        <div class="team-card-body">
+          <div class="mentors-section">
+            <p class="section-label">Mentors</p>
+            <p class="mentors-text">Dr. Kamran Rehan, Mr. Muhammad Waqas Haseeb</p>
+          </div>
+          <div>
+            <p class="section-label">Team Members</p>
+            <ul class="members-list">
+              <li><span class="member-dot"></span>Muhammad Latif</li>
+              <li><span class="member-dot"></span>Muskan Aman Khan</li>
+              <li><span class="member-dot"></span>Tooba Bibi</li>
+              <li><span class="member-dot"></span>Misbah Riaz</li>
+              <li><span class="member-dot"></span>Muhammad Ayyaz</li>
+              <li><span class="member-dot"></span>Naeem Ahmed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team E -->
+      <div class="team-card" data-team="Team E" data-mentors="Dr. Malik Ahmad, Dr. Shakir ullah" data-members="Syed Aamir Abbas, Javeria Ashfaq, Huma Sabir, Muhammad Osama, safoora Rana, Fatima Afzal">
+        <div class="team-card-header">
+          <h3>Team E</h3>
+          <span class="member-count">6 Members</span>
+        </div>
+        <div class="team-card-body">
+          <div class="mentors-section">
+            <p class="section-label">Mentors</p>
+            <p class="mentors-text">Dr. Malik Ahmad, Dr. Shakir Ullah</p>
+          </div>
+          <div>
+            <p class="section-label">Team Members</p>
+            <ul class="members-list">
+              <li><span class="member-dot"></span>Syed Aamir Abbas</li>
+              <li><span class="member-dot"></span>Javeria Ashfaq</li>
+              <li><span class="member-dot"></span>Huma Sabir</li>
+              <li><span class="member-dot"></span>Muhammad Osama</li>
+              <li><span class="member-dot"></span>Safoora Rana</li>
+              <li><span class="member-dot"></span>Fatima Afzal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team F -->
+      <div class="team-card" data-team="Team F" data-mentors="Dr. Sabih Ud Din Khan, Dr. Abdur Razzaq" data-members="Mahum Noor, Fatma Zafar, Saif Ullah khalid, Muneeb ur Rehman, Syeda Afia Shah, Asim Javed">
+        <div class="team-card-header">
+          <h3>Team F</h3>
+          <span class="member-count">6 Members</span>
+        </div>
+        <div class="team-card-body">
+          <div class="mentors-section">
+            <p class="section-label">Mentors</p>
+            <p class="mentors-text">Dr. Sabih Ud Din Khan, Dr. Abdur Razzaq</p>
+          </div>
+          <div>
+            <p class="section-label">Team Members</p>
+            <ul class="members-list">
+              <li><span class="member-dot"></span>Mahum Noor</li>
+              <li><span class="member-dot"></span>Fatma Zafar</li>
+              <li><span class="member-dot"></span>Saif Ullah Khalid</li>
+              <li><span class="member-dot"></span>Muneeb ur Rehman</li>
+              <li><span class="member-dot"></span>Syeda Afia Shah</li>
+              <li><span class="member-dot"></span>Asim Javed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team G -->
+      <div class="team-card" data-team="Team G" data-mentors="Dr. Muhammad Faryad, Dr. Aeysha Khalique" data-members="Muhammad Ubaid ur Rehman, Muhammad Ahmed, Maham Shahzadi, Ayesha Shabbir, Mirza Dur e Adan, Muhammad Daniyal">
+        <div class="team-card-header">
+          <h3>Team G</h3>
+          <span class="member-count">6 Members</span>
+        </div>
+        <div class="team-card-body">
+          <div class="mentors-section">
+            <p class="section-label">Mentors</p>
+            <p class="mentors-text">Dr. Muhammad Faryad, Dr. Aeysha Khalique</p>
+          </div>
+          <div>
+            <p class="section-label">Team Members</p>
+            <ul class="members-list">
+              <li><span class="member-dot"></span>Muhammad Ubaid ur Rehman</li>
+              <li><span class="member-dot"></span>Muhammad Ahmed</li>
+              <li><span class="member-dot"></span>Maham Shahzadi</li>
+              <li><span class="member-dot"></span>Ayesha Shabbir</li>
+              <li><span class="member-dot"></span>Mirza Dur e Adan</li>
+              <li><span class="member-dot"></span>Muhammad Daniyal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Results Message -->
+    <div class="no-results" id="noResults" style="display: none;">
+      No teams found matching your search.
+    </div>
+
+    <!-- Back Button -->
+    <div class="teams-footer">
+      <a href="index.html" class="back-button">← Back to Home</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Quantum Hackathon Pakistan</h3>
+          <p class="tagline">First-ever quantum computing hackathon in Pakistan</p>
+          <p class="description">Bringing together Pakistan's brightest minds to tackle real-world challenges using quantum technologies and contribute to achieving the Sustainable Development Goals.</p>
+          <div class="footer-details">
+            <span>📅 February 6-8, 2026</span>
+            <span>📍 NCP, Islamabad</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#themes">Competition Themes</a></li>
+            <li><a href="index.html#prizes">Prizes and Beyond</a></li>
+            <li><a href="index.html#organizers">Organizers</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-organizers">
+          <h4>Organized By</h4>
+          <ul>
+            <li>PIEAS</li>
+            <li>NCP</li>
+            <li>NILOP</li>
+            <li>OQI</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-notice">
+        <span class="footer-notice-icon">🚀</span>
+        <div>
+          <h4>Event Starting Soon!</h4>
+          <p>42 finalists from 950+ nationwide applications in 7 teams are ready to compete at Pakistan's first quantum computing hackathon. The event begins February 6th, 2026 at NCP, Islamabad.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-links">
+          <a href="index.html#contact">Contact Us</a>
+          <a href="index.html#organizers">Partner With Us</a>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2026 Quantum Hackathon Pakistan. All rights reserved.</p>
+          <p class="collab">A collaboration between leading Pakistani institutions and OQI at CERN</p>
+        </div>
+      </div>
+
+      <div class="footer-final">
+        <p class="cta-text">Follow the Journey | Witness the Quantum Revolution</p>
+        <p class="hashtag">#QuantumHackathonPakistan</p>
+        <p class="tagline">Shaping Pakistan's Quantum Ecosystem</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Search functionality
+    function filterTeams() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      const teamCards = document.querySelectorAll('.team-card');
+      const noResults = document.getElementById('noResults');
+      let visibleCount = 0;
+
+      teamCards.forEach(card => {
+        const teamName = card.dataset.team.toLowerCase();
+        const mentors = card.dataset.mentors.toLowerCase();
+        const members = card.dataset.members.toLowerCase();
+
+        if (teamName.includes(searchTerm) || 
+            mentors.includes(searchTerm) || 
+            members.includes(searchTerm)) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    // Mobile menu toggle
+    function toggleMenu() {
+      alert('Mobile menu - In a production site, this would toggle a mobile navigation menu.');
+    }
+  </script>
+</body>
+</html>

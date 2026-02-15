@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Computing Hackathon Pakistan</title>
+  <meta name="description" content="Pakistan's first quantum computing hackathon bringing together the brightest minds to tackle real-world challenges using quantum technologies.">
+  <link rel="icon" href="images/sponsors/competetion-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/sponsors/competetion-logo.png" alt="Quantum Hackathon Pakistan">
+        <span>Quantum Computing Hackathon Pakistan</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#themes">Competition Themes</a>
+        <a href="#prizes">Prizes and Beyond</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#contact">Contact</a>
+        <a href="teams.html" class="nav-btn">Final Teams</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Quantum Decorative Elements -->
+    <div class="quantum-decorations">
+      <!-- Floating Atoms -->
+      <div class="quantum-atom purple" style="width: 48px; height: 48px; top: 20%; left: 12%;"></div>
+      <div class="quantum-atom indigo" style="width: 40px; height: 40px; top: 70%; right: 15%; animation-delay: 1s;"></div>
+      <div class="quantum-atom purple" style="width: 32px; height: 32px; top: 45%; right: 28%; animation-delay: 2s;"></div>
+      <div class="quantum-atom cyan" style="width: 24px; height: 24px; top: 30%; left: 45%; animation-delay: 3s;"></div>
+      <div class="quantum-atom cyan" style="width: 28px; height: 28px; bottom: 30%; left: 20%; animation-delay: 1.5s;"></div>
+      
+      <!-- Quantum Particles -->
+      <div class="quantum-particle purple" style="top: 18%; left: 30%;"></div>
+      <div class="quantum-particle indigo" style="top: 60%; left: 18%; animation-delay: 0.5s;"></div>
+      <div class="quantum-particle purple" style="top: 28%; right: 14%; animation-delay: 1.5s;"></div>
+      <div class="quantum-particle indigo" style="bottom: 22%; left: 60%; animation-delay: 2.5s;"></div>
+      <div class="quantum-particle cyan" style="top: 14%; right: 22%; animation-delay: 3.5s;"></div>
+      <div class="quantum-particle cyan" style="bottom: 18%; right: 30%; animation-delay: 4s;"></div>
+      
+      <!-- SVG Connection Lines and Waves -->
+      <svg class="quantum-svg" viewBox="0 0 1000 800" fill="none" preserveAspectRatio="none">
+        <!-- Connection lines -->
+        <line x1="120" y1="160" x2="450" y2="360" stroke="#a855f7" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
+        <line x1="850" y1="560" x2="720" y2="360" stroke="#6366f1" stroke-width="1" opacity="0.2" stroke-dasharray="3,3"/>
+        <line x1="200" y1="560" x2="450" y2="360" stroke="#8b5cf6" stroke-width="1" opacity="0.25" stroke-dasharray="4,4"/>
+        <line x1="120" y1="160" x2="200" y2="560" stroke="#c084fc" stroke-width="1" opacity="0.2" stroke-dasharray="2,2"/>
+        <line x1="450" y1="240" x2="720" y2="360" stroke="#06b6d4" stroke-width="1" opacity="0.2" stroke-dasharray="4,4"/>
+        
+        <!-- Wave patterns -->
+        <path d="M0,400 Q250,350 500,400 T1000,400" stroke="#a855f7" stroke-width="1" opacity="0.15"/>
+        <path d="M0,200 Q300,150 600,200 T1200,200" stroke="#6366f1" stroke-width="1" opacity="0.12"/>
+        <path d="M0,600 Q200,550 400,600 T800,600" stroke="#8b5cf6" stroke-width="1" opacity="0.12"/>
+        
+        <!-- Orbital circles -->
+        <circle cx="120" cy="160" r="50" stroke="#a855f7" stroke-width="1" opacity="0.1" fill="none"/>
+        <circle cx="850" cy="560" r="60" stroke="#6366f1" stroke-width="1" opacity="0.08" fill="none"/>
+        <circle cx="450" cy="360" r="40" stroke="#8b5cf6" stroke-width="1" opacity="0.1" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="hero-banner">
+      <div class="hero-banner-inner">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-border"></div>
+        <div class="hero-content">
+          <div>
+            <h1 class="hero-title">First Quantum Computing Hackathon in Pakistan</h1>
+            <p class="hero-subtitle">Solving Real-World Challenges with Quantum Technologies</p>
+            <p class="hero-tagline">STUDENTS • RESEARCHERS • INNOVATORS</p>
+            <div class="hero-details">
+              <div class="hero-detail">
+                <span class="hero-detail-icon">📅</span>
+                <span>February 6-8, 2026</span>
+              </div>
+              <div class="hero-detail">
+                <span class="hero-detail-icon">📍</span>
+                <span>NCP, Islamabad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stats-section">
+      <a href="teams.html" class="hero-cta-btn">Final Teams</a>
+      
+      <div class="stats-banner">
+        <div class="stat-item">
+          <span class="stat-number">950+</span>
+          <p class="stat-label">Applications</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">42</span>
+          <p class="stat-label">Finalists</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">7</span>
+          <p class="stat-label">Teams</p>
+        </div>
+      </div>
+
+      <div class="countdown-section">
+        <p class="countdown-label">Event Starts In</p>
+        <div class="countdown" id="countdown">
+          <div class="countdown-item">
+            <div class="countdown-box">
+              <span class="countdown-number" id="days">00</span>
+            </div>
+            <span class="countdown-unit">Days</span>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-box">
+              <span class="countdown-number" id="hours">00</span>
+            </div>
+            <span class="countdown-unit">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-box">
+              <span class="countdown-number" id="minutes">00</span>
+            </div>
+            <span class="countdown-unit">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-box">
+              <span class="countdown-number" id="seconds">00</span>
+            </div>
+            <span class="countdown-unit">Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-tagline-bottom">
+        <p>Three Days of Ideas, Research and Quantum Breakthroughs</p>
+        <p class="hero-hashtag">#QuantumHackathonPakistan</p>
+      </div>
+
+      <button class="learn-more-btn" onclick="scrollToSection('about')">Learn More</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">About the Hackathon</h2>
+        <p class="section-description">
+          Pakistan's first-ever Quantum Computing Hackathon, supported by the Open Quantum Institute (OQI) at CERN and jointly organized by PIEAS, NILOP, and NCP, is bringing together the brightest minds to tackle real-world challenges using quantum technologies and contribute to achieving the UNO's Sustainable Development Goals (SDGs) in February 2026.
+        </p>
+      </div>
+
+      <!-- Mission Statement -->
+      <div class="mission-card">
+        <h3 class="mission-title">Our Mission</h3>
+        <p class="mission-text">
+          This hackathon will be Pakistan's <strong>first dedicated quantum problem-solving competition</strong>, 
+          directly connecting innovation to the <strong>UN Sustainable Development Goals (SDGs)</strong> while 
+          building national capacity in quantum computing, communication, and security.
+        </p>
+        <p class="mission-tagline">"Shaping Pakistan's Quantum Ecosystem"</p>
+      </div>
+
+      <!-- Competition Methodology -->
+      <h3 class="methodology-title">Competition Methodology</h3>
+      
+      <div class="methodology-grid">
+        <div class="methodology-card">
+          <h4>Applications Closed</h4>
+          <p>Registration has closed. Thank you to all 950+ applicants nationwide who expressed interest in Pakistan's first quantum computing hackathon.</p>
+        </div>
+        <div class="methodology-card">
+          <h4>Coursework Completed</h4>
+          <p>Selected applicants completed OQI-led online quantum computing training in November. The intensive preparation covered quantum principles, programming, and practical applications.</p>
+        </div>
+        <div class="methodology-card">
+          <h4>Teams Formed</h4>
+          <p>42 finalists have been selected from 950+ nationwide applications based on their performance in coursework and dedication.</p>
+        </div>
+      </div>
+      
+      <div class="methodology-arrow">↓</div>
+      
+      <div class="methodology-grid">
+        <div class="methodology-card">
+          <h4>Orientation & Mentorship</h4>
+          <p>Teams will be introduced to the hackathon format, SDG-driven challenges, and assigned expert mentors.</p>
+        </div>
+        <div class="methodology-card">
+          <h4>Competition</h4>
+          <p>During the 3-day event at NCP, teams will develop and present innovative quantum solutions.</p>
+        </div>
+        <div class="methodology-card">
+          <h4>Prizes</h4>
+          <p>Winning teams will receive cash prizes, medals, long-term mentoring, and invitations to present at the International Nathiagalli Summer College.</p>
+        </div>
+      </div>
+
+      <!-- Eligibility -->
+      <div class="eligibility-section">
+        <h3 class="eligibility-title">Eligibility Criteria</h3>
+        <div class="eligibility-card">
+          <h4>Eligibility Criteria</h4>
+          <ul class="eligibility-list">
+            <li><span>•</span> Open to students and young researchers, up to the age of 35 years, from universities and research institutions across Pakistan.</li>
+            <li><span>•</span> Disciplines: Physics, Computer Science, Engineering, Mathematics, AI and Machine Learning</li>
+            <li><span>•</span> Strong motivation and background in STEM fields</li>
+            <li><span>•</span> Commitment to complete preparatory coursework</li>
+            <li><span>•</span> Ability to work collaboratively in diverse teams</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-card">
+        <h3>The Event is Almost Here!</h3>
+        <p>42 finalists from 950+ applications are ready to compete and shape Pakistan's quantum future. The hackathon begins February 6th at NCP, Islamabad.</p>
+        <p class="cta-tagline">Three Days of Ideas, Research and Quantum Breakthroughs</p>
+        <a href="teams.html" class="cta-btn">View Final Teams</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Themes Section -->
+  <section id="themes" class="themes">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">SDG Challenge Themes</h2>
+        <p class="themes-subtitle">
+          The hackathon will address selected <strong>UN Sustainable Development Goals</strong>, 
+          localized for Pakistan's needs. Teams will develop quantum-powered solutions 
+          for real-world challenges.
+        </p>
+        <div class="themes-badge">Choose from 8 Challenge Areas</div>
+      </div>
+
+      <div class="themes-grid">
+        <div class="theme-card">
+          <div class="theme-icon">🏥</div>
+          <h3>Health & Well-Being</h3>
+          <p>Affordable diagnostics & rural healthcare solutions</p>
+          <div class="theme-accent" style="background: #ef4444;"></div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">📚</div>
+          <h3>Quality Education</h3>
+          <p>Inclusive EdTech in local languages</p>
+          <div class="theme-accent" style="background: #3b82f6;"></div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">⚖️</div>
+          <h3>Gender Equality</h3>
+          <p>Reducing gender gaps in STEM & workplaces</p>
+          <div class="theme-accent" style="background: #a855f7;"></div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">💧</div>
+          <h3>Clean Water & Sanitation</h3>
+          <p>Low-tech purification & monitoring systems</p>
+          <div class="theme-accent" style="background: #06b6d4;"></div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">⚡</div>
+          <h3>Clean Energy</h3>
+          <p>Rural solar microgrids & storage solutions</p>
+          <div class="theme-accent" style="background: #eab308;"></div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">💼</div>
+          <h3>Economic Growth</h3>
+          <p>Digital freelancing & micro-enterprise tools</p>
+          <div class="theme-accent" style="background: #22c55e;"></div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">🌍</div>
+          <h3>Climate Action</h3>
+          <p>Early warning systems & AI-based risk maps</p>
+          <div class="theme-accent" style="background: #10b981;"></div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">🌳</div>
+          <h3>Life on Land</h3>
+          <p>Reforestation & biodiversity monitoring</p>
+          <div class="theme-accent" style="background: #84cc16;"></div>
+        </div>
+      </div>
+
+      <!-- Challenge Examples -->
+      <h3 class="challenges-title">Sample Challenge Areas</h3>
+      <div class="challenges-grid">
+        <div class="challenge-card">
+          <h4><span>🏥</span> Healthcare Innovation</h4>
+          <ul>
+            <li><span>•</span> Quantum-enhanced medical diagnostics for rural areas</li>
+            <li><span>•</span> Drug discovery optimization using quantum algorithms</li>
+            <li><span>•</span> Secure patient data management with quantum encryption</li>
+          </ul>
+        </div>
+        <div class="challenge-card">
+          <h4><span>🌱</span> Environmental Solutions</h4>
+          <ul>
+            <li><span>•</span> Climate modeling and prediction systems</li>
+            <li><span>•</span> Quantum optimization for renewable energy grids</li>
+            <li><span>•</span> Biodiversity monitoring using quantum sensors</li>
+          </ul>
+        </div>
+        <div class="challenge-card">
+          <h4><span style="color: #7c3aed; font-weight: bold;">L</span> Education Technology</h4>
+          <ul>
+            <li><span>•</span> Personalized learning with quantum machine learning</li>
+            <li><span>•</span> Language learning platforms in Urdu and local languages</li>
+            <li><span>•</span> Remote education infrastructure optimization</li>
+          </ul>
+        </div>
+        <div class="challenge-card">
+          <h4><span>💼</span> Economic Empowerment</h4>
+          <ul>
+            <li><span>•</span> Quantum-secured digital payment systems</li>
+            <li><span>•</span> Supply chain optimization for small businesses</li>
+            <li><span>•</span> Financial inclusion through quantum cryptography</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Innovation Card -->
+      <div class="innovation-card">
+        <h3>Innovation Meets Impact</h3>
+        <p>Your quantum solution should demonstrate both <strong>technical innovation</strong> and <strong>real-world applicability</strong>. Focus on problems that matter to Pakistani communities while pushing the boundaries of quantum technology.</p>
+        <div class="innovation-badges">
+          <span class="innovation-badge purple">Quantum Innovation</span>
+          <span class="innovation-badge pink">Local Impact</span>
+          <span class="innovation-badge indigo">Global Relevance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prizes Section -->
+  <section id="prizes" class="prizes">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Prizes & Recognition</h2>
+        <p class="prizes-subtitle">Celebrating excellence in quantum innovation with substantial rewards</p>
+      </div>
+
+      <div class="prizes-grid">
+        <div class="prize-card first">
+          <div class="prize-icon gold">1st</div>
+          <p>Cash Prize + Gold Medal</p>
+          <span class="prize-badge">Grand Champion</span>
+        </div>
+        <div class="prize-card">
+          <div class="prize-icon silver">2nd</div>
+          <p>Cash Prize + Silver Medal</p>
+        </div>
+        <div class="prize-card">
+          <div class="prize-icon bronze">3rd</div>
+          <p>Cash Prize + Bronze Medal</p>
+        </div>
+      </div>
+
+      <div class="career-section">
+        <h3 class="career-title">Career Incentives</h3>
+        <div class="career-card">
+          <p>Beyond the monetary rewards, participants gain access to invaluable career development opportunities. Winners receive long-term mentoring from leading quantum researchers, participation in prestigious national and international summer colleges, and invitations to present their work at the International Nathiagalli Summer College. These experiences provide direct pathways to advanced research opportunities, international collaboration networks, and recognition within Pakistan's growing quantum research community. The hackathon serves as a launching pad for participants to establish themselves as pioneers in the country's quantum technology landscape.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizers Section -->
+  <section id="organizers" class="organizers">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Organizing Partners</h2>
+        <p class="organizers-subtitle">
+          Pakistan's premier scientific institutions unite to deliver the nation's 
+          first quantum computing hackathon, bringing together expertise in physics, 
+          engineering, and quantum technologies.
+        </p>
+      </div>
+
+      <!-- Lead Organizers -->
+      <h3 class="organizers-label">Lead Organizers</h3>
+      <div class="lead-organizers">
+        <div class="org-card">
+          <div class="org-logo">
+            <img src="images/sponsors/pieas.png" alt="PIEAS">
+          </div>
+          <h4>PIEAS</h4>
+        </div>
+        <div class="org-card">
+          <div class="org-logo">
+            <img src="images/sponsors/Nilop.jpg" alt="NILOP">
+          </div>
+          <h4>NILOP</h4>
+        </div>
+        <div class="org-card">
+          <div class="org-logo">
+            <img src="images/sponsors/ncp.png" alt="NCP">
+          </div>
+          <h4>NCP</h4>
+        </div>
+      </div>
+
+      <!-- Partners -->
+      <div class="partners-section">
+        <h3 class="organizers-label">Partners</h3>
+        <div class="partners-grid">
+          <div class="oqi-card">
+            <div class="org-logo">
+              <img src="images/sponsors/OQI.jpg" alt="Open Quantum Institute">
+            </div>
+            <h4>Open Quantum Institute</h4>
+          </div>
+          <div class="other-partners">
+            <div class="partner-card green">
+              <div class="org-logo">
+                <img src="images/sponsors/LUMS.png" alt="LUMS">
+              </div>
+              <h4>LUMS</h4>
+            </div>
+            <div class="partner-card purple">
+              <div class="text-logo-box">
+                <span class="text-logo purple">GESDA</span>
+              </div>
+              <h4>GESDA</h4>
+            </div>
+            <div class="partner-card indigo">
+              <div class="text-logo-box">
+                <span class="text-logo indigo">NCQC</span>
+              </div>
+              <h4>NCQC</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sponsors -->
+      <div class="sponsors-section">
+        <h3 class="organizers-label">Sponsors</h3>
+        <div class="sponsors-grid">
+          <img src="images/sponsors/sponsors.jpg" alt="Our Sponsors" class="sponsors-image">
+          <div class="etl-card">
+            <div class="org-logo">
+              <img src="images/sponsors/Emerging Technologies Lab.png" alt="Emerging Technologies Lab">
+            </div>
+            <h4>Emerging Technologies Lab</h4>
+          </div>
+        </div>
+        <div class="sponsor-cta">
+          <div class="sponsor-cta-icon">🤝</div>
+          <h4>Become a Sponsor</h4>
+          <p>Join us in supporting Pakistan's quantum computing future. Sponsorship opportunities available for organizations wanting to support quantum education and research.</p>
+          <a href="#contact" class="cta-btn">Partner With Us</a>
+        </div>
+      </div>
+
+      <!-- Project Leadership -->
+      <div class="leadership-section">
+        <div class="leadership-card">
+          <h3>Project Leadership</h3>
+          <div class="leadership-content">
+            <div class="leadership-photo">
+              <img src="images/team/manzoor-ikram.png" alt="Dr. Manzoor Ikram">
+            </div>
+            <div class="leadership-info">
+              <h4>Dr. Manzoor Ikram</h4>
+              <p class="role">Director General, NILOP</p>
+              <p class="bio">Leading Pakistan's quantum computing hackathon initiative as Project Manager and OQI Liaison, bringing together national institutions and international expertise to advance quantum education and research in Pakistan.</p>
+              <a href="mailto:manzoor_fasihi@yahoo.com" class="email">manzoor_fasihi@yahoo.com</a>
+              <span class="leadership-badge">Project Manager & OQI Liaison</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Building Future -->
+      <div class="future-card">
+        <h3>Building Pakistan's Quantum Future</h3>
+        <p>This hackathon represents a historic collaboration between Pakistan's leading scientific institutions and international quantum experts, establishing a foundation for long-term quantum research and development in the region.</p>
+        <div class="future-badges">
+          <span class="future-badge blue">Research Excellence</span>
+          <span class="future-badge purple">Student Development</span>
+          <span class="future-badge indigo">🌐 Global Collaboration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Have Questions?</h2>
+        <p class="contact-subtitle">Get in touch with our team for any questions about the hackathon, registration, or participation.</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Ask a Question</h3>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <select required>
+              <option value="">Select a topic</option>
+              <option value="event">Event Information</option>
+              <option value="participant">Participant Questions</option>
+              <option value="technical">Technical Questions</option>
+              <option value="partnership">Partnership Opportunities</option>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="4" placeholder="Type your question here..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        <div class="contact-footer">
+          <p>Messages will be sent to the organizing committee at: <strong>info@quantumhackathon.pk</strong></p>
+          <p>We typically respond within 24-48 hours. For urgent matters, please contact our organizing committee directly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Quantum Hackathon Pakistan</h3>
+          <p class="tagline">First-ever quantum computing hackathon in Pakistan</p>
+          <p class="description">Bringing together Pakistan's brightest minds to tackle real-world challenges using quantum technologies and contribute to achieving the Sustainable Development Goals.</p>
+          <div class="footer-details">
+            <span>📅 February 6-8, 2026</span>
+            <span>📍 NCP, Islamabad</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#themes">Competition Themes</a></li>
+            <li><a href="#prizes">Prizes and Beyond</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-organizers">
+          <h4>Organized By</h4>
+          <ul>
+            <li>PIEAS</li>
+            <li>NCP</li>
+            <li>NILOP</li>
+            <li>OQI</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-notice">
+        <span class="footer-notice-icon">🚀</span>
+        <div>
+          <h4>Event Starting Soon!</h4>
+          <p>42 finalists from 950+ nationwide applications in 7 teams are ready to compete at Pakistan's first quantum computing hackathon. The event begins February 6th, 2026 at NCP, Islamabad.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-links">
+          <a href="#contact">Contact Us</a>
+          <a href="#organizers">Partner With Us</a>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2026 Quantum Hackathon Pakistan. All rights reserved.</p>
+          <p class="collab">A collaboration between leading Pakistani institutions and OQI at CERN</p>
+        </div>
+      </div>
+
+      <div class="footer-final">
+        <p class="cta-text">Follow the Journey | Witness the Quantum Revolution</p>
+        <p class="hashtag">#QuantumHackathonPakistan</p>
+        <p class="tagline">Shaping Pakistan's Quantum Ecosystem</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Countdown Timer
+    function updateCountdown() {
+      const targetDate = new Date('2026-02-06T00:00:00').getTime();
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Smooth scroll
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Form submit handler
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert('Thank you for your message! We will get back to you soon.');
+      event.target.reset();
+    }
+
+    // Mobile menu toggle (placeholder)
+    function toggleMenu() {
+      alert('Mobile menu - In a production site, this would toggle a mobile navigation menu.');
+    }
+  </script>
+</body>
+</html>
