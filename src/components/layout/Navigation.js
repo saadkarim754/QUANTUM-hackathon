@@ -9,7 +9,7 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'About', href: 'about' },
-    { name: 'Competition Themes', href: 'themes' },
+    { name: 'Themes', href: 'themes' },
     { name: 'Winners', href: 'winners' },
     { name: 'Organizers', href: 'organizers' },
     { name: 'Contact', href: 'contact' }
