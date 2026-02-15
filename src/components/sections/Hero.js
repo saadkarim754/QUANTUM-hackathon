@@ -111,7 +111,7 @@ const Hero = () => {
         <div className="absolute bottom-1/5 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping" style={{animationDelay: '4s'}}></div>
       </div>
       {/* Canvas-style Title Section with Team Image Background */}
-      <div className="relative w-full max-w-6xl mx-auto h-56 sm:h-80 lg:h-96 mb-6 sm:mb-12 overflow-hidden rounded-lg shadow-xl px-4 sm:px-8 -mt-8 sm:mt-0">
+      <div className="relative w-full max-w-6xl mx-auto h-56 sm:h-80 lg:h-96 mb-6 sm:mb-12 overflow-hidden rounded-lg shadow-xl px-4 sm:px-8 mt-4 sm:mt-0">
         <div className="w-full h-full relative overflow-hidden rounded-lg">
           {/* Team Image Background */}
           <div 
@@ -186,25 +186,11 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Event Countdown */}
+        {/* Event Concluded Banner */}
         <div className="mb-8">
-          <p className="text-purple-600 font-semibold mb-3 tracking-wide uppercase text-sm animate-pulse">Event Starts In</p>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
-            {[
-              { label: 'Days', value: timeLeft.days },
-              { label: 'Hours', value: timeLeft.hours },
-              { label: 'Minutes', value: timeLeft.minutes },
-              { label: 'Seconds', value: timeLeft.seconds }
-            ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/80 backdrop-blur-md border border-purple-200 rounded-2xl flex items-center justify-center shadow-md transform transition-transform hover:scale-105">
-                  <span className="text-2xl sm:text-3xl font-bold text-purple-900">
-                    {isClient ? item.value.toString().padStart(2, '0') : '00'}
-                  </span>
-                </div>
-                <span className="text-xs text-purple-800 font-semibold mt-2 uppercase tracking-wide">{item.label}</span>
-              </div>
-            ))}
+          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-2xl shadow-lg inline-block">
+            <p className="text-lg sm:text-xl font-bold">✓ Event Successfully Concluded</p>
+            <p className="text-sm opacity-90">February 6-8, 2026</p>
           </div>
         </div>
         
@@ -213,9 +199,20 @@ const Hero = () => {
           <p className="text-purple-700 font-medium text-sm sm:text-base mb-2">
             Three Days of Ideas, Research and Quantum Breakthroughs
           </p>
-          <p className="text-indigo-600 font-bold text-base sm:text-lg">
+          <p className="text-indigo-600 font-bold text-base sm:text-lg mb-4">
             #QuantumHackathonPakistan
           </p>
+          {/* PIEAS Quantum Link */}
+          <a 
+            href="https://www.pieas.edu.pk/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 underline underline-offset-4 font-medium text-sm sm:text-base transition-colors"
+          >
+            <span>🔬</span>
+            <span>Learn more about PIEAS Quantum Facilities</span>
+            <span>→</span>
+          </a>
         </div>
         
         {/* Learn More Button */}

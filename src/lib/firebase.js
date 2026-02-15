@@ -13,13 +13,24 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Check if Firebase config is available
+const isFirebaseConfigured = firebaseConfig.projectId && firebaseConfig.apiKey;
+
+// Initialize Firebase only if configured
+const app = isFirebaseConfigured ? initializeApp(firebaseConfig) : null;
 
 // Initialize Firestore
-export const db = getFirestore(app);
+export const db = app ? getFirestore(app) : null;
 
-// Initialize Analytics (only in browser environment)
-export const analytics = typeof window !== 'undefined' && isSupported() ? getAnalytics(app) : null;
+// Initialize Analytics (lazy, only in browser environment and if Firebase is configured)
+let analytics = null;
+if (typeof window !== 'undefined' && app) {
+  isSupported().then(supported => {
+    if (supported) {
+      analytics = getAnalytics(app);
+    }
+  }).catch(() => {});
+}
 
+export { analytics };
 export default app;

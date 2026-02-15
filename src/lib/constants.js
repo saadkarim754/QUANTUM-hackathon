@@ -6,7 +6,7 @@ export const HACKATHON_INFO = {
   location: "National Centre for Physics (NCP), Islamabad, Pakistan",
   registrationDeadline: "Closed",
   
-  description: `Pakistan's first dedicated quantum problem-solving competition is happening soon! 42 finalists in 7 teams will compete in February 2026 to tackle real-world challenges using quantum technologies.`,
+  description: `Pakistan's first dedicated quantum problem-solving competition has successfully concluded! 42 finalists in 7 teams competed in February 2026 to tackle real-world challenges using quantum technologies.`,
   
   stats: {
     applicants: 950,
@@ -47,9 +47,9 @@ export const TIMELINE = [
   },
   {
     phase: "Hackathon Event",
-    description: "3-day intensive hackathon at NCP with mentorship, development, and presentations.",
+    description: "3-day intensive hackathon at NCP with mentorship, development, and presentations. Event successfully concluded!",
     deadline: "February 6-8, 2026",
-    status: "active"
+    status: "completed"
   }
 ];
 

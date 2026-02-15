@@ -29,13 +29,13 @@ const About = () => {
     {
       step: 4,
       title: "Orientation & Mentorship",
-      description: "Teams will be introduced to the hackathon format, SDG-driven challenges, and assigned expert mentors.",
+      description: "Teams were introduced to the hackathon format, SDG-driven challenges, and assigned expert mentors.",
       icon: ""
     },
     {
       step: 5,
       title: "Competition",
-      description: "During the 3-day event at NCP, teams will develop and present innovative quantum solutions.",
+      description: "During the 3-day event at NCP, teams developed and presented innovative quantum solutions.",
       icon: ""
     },
     {
@@ -130,7 +130,7 @@ const About = () => {
             About the Hackathon
           </h2>
           <p className="text-sm sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
-            Pakistan's first-ever Quantum Computing Hackathon, supported by the Open Quantum Institute (OQI) at CERN and jointly organized by PIEAS, NILOP, and NCP, is bringing together the brightest minds to tackle real-world challenges using quantum technologies and contribute to achieving the UNO's Sustainable Development Goals (SDGs) in February 2026.
+            Pakistan's first-ever Quantum Computing Hackathon, supported by the Open Quantum Institute (OQI) at CERN and jointly organized by PIEAS, NILOP, and NCP, brought together the brightest minds to tackle real-world challenges using quantum technologies and contribute to achieving the UNO's Sustainable Development Goals (SDGs) in February 2026.
           </p>
         </div>
 
@@ -268,18 +268,18 @@ const About = () => {
         <div className="text-center">
           <Card variant="gradient" className="max-w-2xl mx-auto p-8">
             <h3 className="text-2xl font-bold text-purple-900 mb-4">
-              The Event is Almost Here!
+              The Event Has Concluded!
             </h3>
             <p className="text-purple-700 mb-4">
-              42 finalists from 950+ applications are ready to compete and shape Pakistan's quantum future. 
-              The hackathon begins February 6th at NCP, Islamabad.
+              42 finalists from 950+ applications competed to shape Pakistan's quantum future. 
+              The hackathon successfully concluded on February 8th, 2026 at NCP, Islamabad.
             </p>
             <p className="text-indigo-600 font-semibold mb-6">
               Three Days of Ideas, Research and Quantum Breakthroughs
             </p>
             <a href="/participants">
               <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold px-8 py-3 rounded-full transition-all duration-200 transform hover:scale-105">
-                View Final Teams
+                View Final Teams & Winners
               </button>
             </a>
           </Card>
