@@ -161,14 +161,6 @@ const Hero = () => {
 
       {/* Final Teams Button and Event Countdown - Outside the title card */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -mt-2 sm:-mt-1">
-        {/* View Participants Button */}
-        <div className="mb-3 sm:mb-2">
-          <a href="/participants">
-            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold px-10 sm:px-12 py-5 sm:py-5 rounded-full text-lg sm:text-lg shadow-lg transition-all duration-200 transform hover:scale-105">
-              Final Teams
-            </button>
-          </a>
-        </div>
         
         {/* Stats Banner */}
         <div className="mb-4 flex flex-wrap justify-center gap-4 sm:gap-8">
